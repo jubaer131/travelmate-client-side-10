@@ -2,9 +2,60 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
+import Root from './assets/pages/Root.jsx'
+import ErrorPage from './assets/pages/ErrorPage.jsx'
+import AuthProvider from './assets/firebase/AutherProvider.jsx'
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import AllTouristSport from './assets/pages/AllTouristSport.jsx'
+import Home from './assets/pages/Home.jsx'
+import Login from './assets/form/Login.jsx'
+import Register from './assets/form/Register.jsx'
+import AddTouristSport from './assets/pages/AddTouristSport.jsx'
+import Mylist from './assets/pages/Mylist.jsx'
+
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Root></Root>,
+    errorElement: <ErrorPage></ErrorPage>,
+    children: [
+      {
+        path: "/",
+        element: <Home></Home>,
+      },
+      {
+        path: "/alltouristsport",
+        element: <AllTouristSport></AllTouristSport>,
+      },
+      {
+        path: "/addtouristsport",
+        element: <AddTouristSport></AddTouristSport>,
+      },
+      {
+        path: "/mylist",
+        element: <Mylist></Mylist>,
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/register",
+        element: <Register></Register>,
+      },
+
+    ],
+  },
+]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>,
 )
