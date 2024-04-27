@@ -1,25 +1,29 @@
-
+import Swal from 'sweetalert2'
 
 const AddTouristSport = () => {
     const handleaddCoffee = event => {
         event.preventDefault()
         const form = event.target
         const name = form.name.value;
-        const quantity = form.quantity.value;
-        const Suplier = form.Suplier.value;
-        const Taste = form.Taste.value;
-        const Category = form.Category.value;
-        const Details = form.Details.value;
+        const country = form.country.value;
+        const location = form.location.value;
+        const description = form.description.value;
+        const cost = form.cost.value;
+        const seasonality = form.seasonality.value;
+        const traveltime = form.traveltime.value;
+        const visitor = form.visitor.value;
+        const email = form.email.value;
+        const username = form.username.value;
         const Photo = form.Photo.value;
-        const newCoffee = { name, quantity, Suplier, Taste, Category, Details, Photo }
-        console.log(newCoffee)
+        const newtour = { name, country, location, description, cost, seasonality, traveltime, visitor, email, username, Photo }
+        console.log(newtour)
 
-        fetch('http://localhost:5000/coffee', {
+        fetch('http://localhost:5000/tour', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify(newCoffee),
+            body: JSON.stringify(newtour),
         })
             .then(res => res.json())
             .then(data => {
@@ -30,16 +34,18 @@ const AddTouristSport = () => {
                         text: 'user added succeesfully',
                         icon: 'success',
                         confirmButtonText: 'Cool'
+
                     })
+
                 }
             })
     }
     return (
         <div>
-            <h1 className="text-green-500 text-3xl text-center">add coffee</h1>
+            <h1 className="text-green-500 text-3xl text-center">Add tourist sport</h1>
             <div className="space-y-2 max-w-96 mx-auto text-center">
-                <p className="font-medium">Personal Inormation</p>
-                <p className="text-xs">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci fuga autem eum!</p>
+                <p className="font-medium">Welcome to the Travelmate agency </p>
+                <p className="text-xs">This feature allows you to contribute to our growing database of tourist destinations!</p>
             </div>
             <section className="p-10 dark:bg-gray-100 dark:text-gray-900 shadow-xl">
                 <form onSubmit={handleaddCoffee} className="container flex flex-col mx-auto space-y-12">
@@ -49,60 +55,100 @@ const AddTouristSport = () => {
                             <div className="col-span-full sm:col-span-3">
                                 <label className=" w-full">
                                     <div className="label">
-                                        <span className="label-text"> Coffee Name</span>
+                                        <span className="label-text"> Tourist sport Name</span>
 
                                     </div>
-                                    <input type="text" name="name" placeholder=" Coffee Name" className="input input-bordered w-full " />
+                                    <input type="text" name="name" placeholder="Tourist sport Name" className="input input-bordered w-full " />
 
                                 </label>
                             </div>
                             <div className="col-span-full sm:col-span-3">
                                 <label className="form-control w-full ">
                                     <div className="label">
-                                        <span className="label-text">    Available quantity</span>
+                                        <span className="label-text">  Country Name</span>
 
                                     </div>
-                                    <input type="text" name="quantity" placeholder="    Available quantity" className="input input-bordered w-full " />
+                                    <input type="text" name="country" placeholder=" Country Name  " className="input input-bordered w-full " />
 
                                 </label>
                             </div>
                             <div className="col-span-full sm:col-span-3">
                                 <label className="form-control w-full">
                                     <div className="label">
-                                        <span className="label-text">       Suplier</span>
+                                        <span className="label-text"> Location</span>
 
                                     </div>
-                                    <input type="text" name="Suplier" placeholder="      Suplier Name" className="input input-bordered w-full " />
+                                    <input type="text" name="location" placeholder=" Location" className="input input-bordered w-full " />
 
                                 </label>
                             </div>
                             <div className="col-span-full sm:col-span-3">
                                 <label className="form-control w-full ">
                                     <div className="label">
-                                        <span className="label-text">   Taste     </span>
+                                        <span className="label-text">Short description </span>
 
                                     </div>
-                                    <input type="text" name="Taste" placeholder="     Taste" className="input input-bordered w-full " />
+                                    <input type="text" name="description" placeholder="Short description  " className="input input-bordered w-full " />
 
                                 </label>
                             </div>
                             <div className="col-span-full sm:col-span-3">
                                 <label className="form-control w-full ">
                                     <div className="label">
-                                        <span className="label-text">   Category    </span>
+                                        <span className="label-text">Average cost </span>
 
                                     </div>
-                                    <input type="text" name="Category" placeholder="   Category" className="input input-bordered w-full " />
+                                    <input type="text" name="cost" placeholder=" Average cost" className="input input-bordered w-full " />
 
                                 </label>
                             </div>
                             <div className="col-span-full sm:col-span-3">
                                 <label className="form-control w-full ">
                                     <div className="label">
-                                        <span className="label-text">  Details  </span>
+                                        <span className="label-text"> Seasonality </span>
 
                                     </div>
-                                    <input type="text" name="Details" placeholder="  Details" className="input input-bordered w-full " />
+                                    <input type="text" name="seasonality" placeholder=" Seasonality" className="input input-bordered w-full " />
+
+                                </label>
+                            </div>
+                            <div className="col-span-full sm:col-span-3">
+                                <label className="form-control w-full ">
+                                    <div className="label">
+                                        <span className="label-text"> Travel time </span>
+
+                                    </div>
+                                    <input type="text" name="traveltime" placeholder="  Travel time " className="input input-bordered w-full " />
+
+                                </label>
+                            </div>
+                            <div className="col-span-full sm:col-span-3">
+                                <label className="form-control w-full ">
+                                    <div className="label">
+                                        <span className="label-text">Total visitor paryer </span>
+
+                                    </div>
+                                    <input type="text" name="visitor" placeholder="Total visitor paryer" className="input input-bordered w-full " />
+
+                                </label>
+                            </div>
+                            <div className="col-span-full sm:col-span-3">
+                                <label className="form-control w-full ">
+                                    <div className="label">
+                                        <span className="label-text">User email</span>
+
+                                    </div>
+                                    <input type="text" name="email" placeholder="User email" className="input input-bordered w-full " />
+
+                                </label>
+                            </div>
+                            <div className="col-span-full sm:col-span-3">
+                                <label className="form-control w-full ">
+                                    <div className="label">
+                                        <span className="label-text"> User name </span>
+
+                                    </div>
+                                    <input type="text" name="username" placeholder=" User name " className="input input-bordered w-full " />
 
                                 </label>
                             </div>
