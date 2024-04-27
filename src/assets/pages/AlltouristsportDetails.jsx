@@ -7,8 +7,8 @@ import { FaDollarSign } from "react-icons/fa";
 const AlltouristsportDetails = () => {
 
     const details = useLoaderData()
-    const { Photo, cost, country, description, email, location, seasonality, name,
-        traveltime, username, visitor, _id } = details
+    const { Photo, cost, country, description, location, seasonality, name,
+        traveltime, visitor, } = details
     console.log(details)
     return (
         <div>
