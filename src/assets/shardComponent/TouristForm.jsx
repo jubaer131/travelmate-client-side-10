@@ -2,8 +2,8 @@ import { useContext } from 'react';
 import Swal from 'sweetalert2'
 import { authContest } from '../firebase/AutherProvider';
 
-const AddTouristSport = () => {
 
+const TouristForm = () => {
     const { user } = useContext(authContest)
     console.log(user)
 
@@ -21,15 +21,15 @@ const AddTouristSport = () => {
         const email = user.email;
         const username = user.displayName;
         const Photo = form.Photo.value;
-        const newtour = { name, country, location, description, cost, seasonality, traveltime, email, username, visitor, Photo }
-        console.log(newtour)
+        const newsport = { name, country, location, description, cost, seasonality, traveltime, email, username, visitor, Photo }
+        console.log(newsport)
 
-        fetch('http://localhost:5000/tour', {
+        fetch('http://localhost:5000/sport', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify(newtour),
+            body: JSON.stringify(newsport),
         })
             .then(res => res.json())
             .then(data => {
@@ -165,4 +165,4 @@ const AddTouristSport = () => {
     );
 };
 
-export default AddTouristSport;
+export default TouristForm;

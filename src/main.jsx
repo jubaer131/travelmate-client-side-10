@@ -16,6 +16,7 @@ import Register from './assets/form/Register.jsx'
 import AddTouristSport from './assets/pages/AddTouristSport.jsx'
 import Mylist from './assets/pages/Mylist.jsx'
 import AlltouristsportDetails from './assets/pages/AlltouristsportDetails.jsx'
+import TouristSportDetailsCard from './assets/pages/TouristSportDetailsCard.jsx'
 
 
 const router = createBrowserRouter([
@@ -45,6 +46,7 @@ const router = createBrowserRouter([
       {
         path: "/mylist",
         element: <Mylist></Mylist>,
+
       },
       {
         path: "/login",
@@ -53,6 +55,11 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>,
+      },
+      {
+        path: "/touristsport/:id",
+        element: <TouristSportDetailsCard></TouristSportDetailsCard>,
+        loader: ({ params }) => fetch(`http://localhost:5000/sport/${params.id}`)
       },
 
     ],
