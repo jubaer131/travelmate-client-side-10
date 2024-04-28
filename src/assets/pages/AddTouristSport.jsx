@@ -48,12 +48,12 @@ const AddTouristSport = () => {
     }
     return (
         <div>
-            <h1 className="text-green-500 text-3xl text-center">Add tourist sport</h1>
-            <div className="space-y-2 max-w-96 mx-auto text-center">
-                <p className="font-medium">Welcome to the Travelmate agency </p>
-                <p className="text-xs">This feature allows you to contribute to our growing database of tourist destinations!</p>
+            <h1 className="text-violet-500 text-4xl font-semibold text-center mt-8">Add tourist sport</h1>
+            <div className="space-y-3 max-w-96 mx-auto text-center ">
+                <p className="font-medium text-xl">Welcome to the Travelmate agency </p>
+                <p className="text-xm">This feature allows you to contribute to our growing database of tourist destinations!</p>
             </div>
-            <section className="p-10 dark:bg-gray-100 dark:text-gray-900 shadow-xl">
+            <section className="p-8 dark:bg-gray-100 dark:text-gray-900 shadow-xl">
                 <form onSubmit={handleaddCoffee} className="container flex flex-col mx-auto space-y-12">
                     <fieldset className="grid grid-cols-3 gap-6 p-6 rounded-md shadow-sm dark:bg-gray-50">
 
@@ -150,7 +150,7 @@ const AddTouristSport = () => {
                                 </label>
                             </div>
                             <div className="col-span-full">
-                                <input type="submit" value="add coffee" className="btn btn-block bg-green-500" />
+                                <input type="submit" value="add coffee" className="btn btn-block bg-violet-500 text-white" />
                             </div>
 
 

@@ -11,9 +11,9 @@ const AlltouristSportCard = ({ item }) => {
             <div className="max-w-lg p-4 shadow-md dark:bg-gray-50 dark:text-gray-800">
                 <div className="flex justify-between pb-4 border-bottom">
                     <div className="flex items-center">
-                        <a rel="noopener noreferrer" href="#" className="mb-0 capitalize dark:text-gray-800">Photography</a>
+                        <a rel="noopener noreferrer" href="#" className="mb-0 capitalize dark:text-gray-800"></a>
                     </div>
-                    <a rel="noopener noreferrer" href="#">See All</a>
+                    <a rel="noopener noreferrer" href="#"></a>
                 </div>
                 <div className="space-y-4">
                     <div className="space-y-2">
@@ -22,21 +22,24 @@ const AlltouristSportCard = ({ item }) => {
                             <span> </span>
                         </div>
                     </div>
-                    <div className="space-y-2">
+                    <div className="space-y-3">
                         <a rel="noopener noreferrer" href="#" className="block">
-                            <h3 className="text-xl font-semibold dark:text-violet-600 mb-6">{name}</h3>
+                            <h3 className="text-xl font-semibold dark:text-violet-600 mb-6 text-3xl font-bold">{name}</h3>
                         </a>
                         <div className="flex gap-8">
-                            <p className="leading-snug dark:text-gray-600"> Total Cost : {cost}</p>
-                            <p className="leading-snug dark:text-gray-600">Total visitor : {visitor}</p>
+                            <p className="leading-snug dark:text-gray-600 text-[15px]"> Country : {country}</p>
+                            <p className="leading-snug dark:text-gray-600 text-[15px]">Total visitor : {visitor}</p>
                         </div>
                         <div className="flex gap-8">
-                            <p className="leading-snug dark:text-gray-600">Travel time : {traveltime}</p>
-                            <p className="leading-snug dark:text-gray-600">Seasonality : {seasonality}</p>
+                            <p className="leading-snug dark:text-gray-600 text-[15px]">Travel time : {traveltime}</p>
+                            <p className="leading-snug dark:text-gray-600 text-[15px]">Seasonality : {seasonality}</p>
                         </div>
-                        <Link to={`/details/${_id}`}>
-                            <button className="btn btn-primary">View details</button>
-                        </Link>
+                        <div className="mt-5">
+                            <Link to={`/details/${_id}`}>
+                                <button className="btn bg-violet-400">View details</button>
+                            </Link>
+                        </div>
+
 
                     </div>
                 </div>

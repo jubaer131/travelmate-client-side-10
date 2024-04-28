@@ -21,23 +21,23 @@ const Navbar = () => {
     const links = <>
 
         <NavLink
-            to='/' className={({ isActive }) => isActive ? 'text-[16px] text-white font-medium    border-green-500 mr-3' : 'text-[16px] font-medium  border-green-500 mr-3 '}>
+            to='/' className={({ isActive }) => isActive ? 'text-[16px] text-violet-500 font-medium    border-green-500 mr-5' : 'text-[16px] font-medium  border-green-500 mr-5 '}>
             Home
         </NavLink>
 
 
         <NavLink
-            to="/alltouristsport" className={({ isActive }) => isActive ? 'text-[16px] text-white font-medium   border-green-500 mr-3 ' : 'text-[16px] font-medium  border-green-400 mr-3 '} >
-            AllTouristSport
+            to="/alltouristsport" className={({ isActive }) => isActive ? 'text-[16px] text-violet-500 font-medium   border-green-500 mr-5 ' : 'text-[16px] font-medium  border-green-400 mr-5 '} >
+            All Tourist Sport
         </NavLink>
 
 
         <NavLink
-            to='/addtouristsport' className={({ isActive }) => isActive ? 'text-[16px] text-white font-medium    border-green-500 mr-3 ' : 'text-[16px] font-medium  border-green-400 mr-3 '} >
-            AddTouristSport
+            to='/addtouristsport' className={({ isActive }) => isActive ? 'text-[16px] text-violet-500 font-medium    border-green-500 mr-5 ' : 'text-[16px] font-medium  border-green-400 mr-5 '} >
+            Add Tourist Sport
         </NavLink>
         <NavLink
-            to='/mylist' className={({ isActive }) => isActive ? 'text-[16px] text-white font-medium    border-green-500 mr-3 ' : 'text-[16px] font-medium  border-green-400 mr-3 '} >
+            to='/mylist' className={({ isActive }) => isActive ? 'text-[16px] text-violet-500 font-medium    border-green-500 mr-5 ' : 'text-[16px] font-medium  border-green-400 mr-5 '} >
             My list
         </NavLink>
         <button className="">
@@ -64,7 +64,7 @@ const Navbar = () => {
 
 
     return (
-        <div className="navbar  rounded-t-lg md:shadow-xl mt-8 mb-3">
+        <div className="navbar  rounded-t-lg md:shadow-xl mt-8 mb-3 rounded-xl">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -75,7 +75,7 @@ const Navbar = () => {
 
                     </ul>
                 </div>
-                <a className=" font-bold text-3xl ">Dreams <span className="font-bold text-3xl text-white animate__animated animate__fadeInRightBig">Home</span></a>
+                <a className=" font-bold text-3xl ">Travelmate<span className="font-bold text-3xl text-white animate__animated animate__fadeInRightBig"></span></a>
 
             </div>
             <div className="navbar-center hidden lg:flex">
@@ -87,7 +87,7 @@ const Navbar = () => {
 
                 {
                     user ? <>
-                        <div className="tooltip mr-4 tooltip-bottom" data-tip={user.displayName}>
+                        <div className="tooltip mr-4 tooltip-top" data-tip={user.displayName}>
 
                             <button className="">  <div tabIndex={0} role="button" className=" avatar">
                                 <div className="w-[45px] rounded-full">
@@ -98,8 +98,8 @@ const Navbar = () => {
                             </button>
                         </div>
 
-                        <button onClick={handlelogout} className="btn bg-white">Logout </button>
-                    </> : <Link to="/login">  <a className="btn bg-white">Login</a> </Link>
+                        <button onClick={handlelogout} className="btn bg-white text-[15px]">Logout </button>
+                    </> : <Link to="/login">  <a className="btn bg-white text-[15px]">Login</a> </Link>
                 }
 
 
