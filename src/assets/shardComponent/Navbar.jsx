@@ -1,12 +1,12 @@
 
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { authContest } from "../firebase/AutherProvider";
 
 
 const Navbar = () => {
 
-    const [theme, settheme] = useState('light')
+    const [theme, settheme] = useState("light");
 
 
     const handleToggle = e => {

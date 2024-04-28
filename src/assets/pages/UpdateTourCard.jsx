@@ -1,12 +1,17 @@
 
+
 import { useContext } from 'react';
 import Swal from 'sweetalert2'
 import { authContest } from '../firebase/AutherProvider';
+import { useLoaderData } from 'react-router-dom';
+
 
 
 const UpdateTourCard = () => {
     const { user } = useContext(authContest)
-    console.log(user)
+    const updatecard = useLoaderData()
+    console.log(updatecard)
+    const { name, country, location, description, cost, seasonality, traveltime, email, username, visitor, Photo, _id } = updatecard
 
     const handleaddsport = event => {
         event.preventDefault()
@@ -22,10 +27,10 @@ const UpdateTourCard = () => {
         const email = user.email;
         const username = user.displayName;
         const Photo = form.Photo.value;
-        const newsport = { name, country, location, description, cost, seasonality, traveltime, email, username, visitor, Photo }
+        const newsport = { name, country, location, description, cost, seasonality, traveltime, email, username, visitor, Photo, }
         console.log(newsport)
 
-        fetch(`http://localhost:5000/coffee/${_id}`, {
+        fetch(`http://localhost:5000/updatetour/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -38,7 +43,7 @@ const UpdateTourCard = () => {
                 if (data.modifiedCount > 0) {
                     Swal.fire({
                         title: 'Success!',
-                        text: 'Coffee Updated Successfully',
+                        text: 'Card Updated Successfully',
                         icon: 'success',
                         confirmButtonText: 'Cool'
                     })
@@ -47,11 +52,8 @@ const UpdateTourCard = () => {
     }
     return (
         <div>
-            <h1 className="text-green-500 text-3xl text-center">Add tourist sport</h1>
-            <div className="space-y-2 max-w-96 mx-auto text-center">
-                <p className="font-medium">Welcome to the Travelmate agency </p>
-                <p className="text-xs">This feature allows you to contribute to our growing database of tourist destinations!</p>
-            </div>
+            <h1 className="text-green-500 text-3xl text-center">Update the Card</h1>
+
             <section className="p-10 dark:bg-gray-100 dark:text-gray-900 shadow-xl">
                 <form onSubmit={handleaddsport} className="container flex flex-col mx-auto space-y-12">
                     <fieldset className="grid grid-cols-3 gap-6 p-6 rounded-md shadow-sm dark:bg-gray-50">
@@ -63,7 +65,7 @@ const UpdateTourCard = () => {
                                         <span className="label-text"> Tourist sport Name</span>
 
                                     </div>
-                                    <input type="text" name="name" placeholder="Tourist sport Name" className="input input-bordered w-full " />
+                                    <input type="text" name="name" placeholder="Tourist sport Name" defaultValue={name} className="input input-bordered w-full " />
 
                                 </label>
                             </div>
@@ -73,7 +75,7 @@ const UpdateTourCard = () => {
                                         <span className="label-text">  Country Name</span>
 
                                     </div>
-                                    <input type="text" name="country" placeholder=" Country Name  " className="input input-bordered w-full " />
+                                    <input type="text" name="country" placeholder=" Country Name" defaultValue={country} className="input input-bordered w-full " />
 
                                 </label>
                             </div>
@@ -83,7 +85,7 @@ const UpdateTourCard = () => {
                                         <span className="label-text"> Location</span>
 
                                     </div>
-                                    <input type="text" name="location" placeholder=" Location" className="input input-bordered w-full " />
+                                    <input type="text" name="location" placeholder=" Location" defaultValue={location} className="input input-bordered w-full " />
 
                                 </label>
                             </div>
@@ -93,7 +95,7 @@ const UpdateTourCard = () => {
                                         <span className="label-text">Short description </span>
 
                                     </div>
-                                    <input type="text" name="description" placeholder="Short description  " className="input input-bordered w-full " />
+                                    <input type="text" name="description" placeholder="Short description" defaultValue={description} className="input input-bordered w-full " />
 
                                 </label>
                             </div>
@@ -103,7 +105,7 @@ const UpdateTourCard = () => {
                                         <span className="label-text">Average cost </span>
 
                                     </div>
-                                    <input type="text" name="cost" placeholder=" Average cost" className="input input-bordered w-full " />
+                                    <input type="text" name="cost" placeholder=" Average cost" defaultValue={cost} className="input input-bordered w-full " />
 
                                 </label>
                             </div>
@@ -113,7 +115,7 @@ const UpdateTourCard = () => {
                                         <span className="label-text"> Seasonality </span>
 
                                     </div>
-                                    <input type="text" name="seasonality" placeholder=" Seasonality" className="input input-bordered w-full " />
+                                    <input type="text" name="seasonality" placeholder=" Seasonality" defaultValue={seasonality} className="input input-bordered w-full " />
 
                                 </label>
                             </div>
@@ -123,7 +125,7 @@ const UpdateTourCard = () => {
                                         <span className="label-text"> Travel time </span>
 
                                     </div>
-                                    <input type="text" name="traveltime" placeholder="  Travel time " className="input input-bordered w-full " />
+                                    <input type="text" name="traveltime" placeholder="  Travel time" defaultValue={traveltime} className="input input-bordered w-full " />
 
                                 </label>
                             </div>
@@ -133,7 +135,7 @@ const UpdateTourCard = () => {
                                         <span className="label-text">Total visitor paryer </span>
 
                                     </div>
-                                    <input type="text" name="visitor" placeholder="Total visitor paryer" className="input input-bordered w-full " />
+                                    <input type="text" name="visitor" placeholder="Total visitor paryer" defaultValue={visitor} className="input input-bordered w-full " />
 
                                 </label>
                             </div>
@@ -144,7 +146,7 @@ const UpdateTourCard = () => {
                                         <span className="label-text"> Photo url </span>
 
                                     </div>
-                                    <input type="url" name="Photo" placeholder="  Photo url" className="input input-bordered w-full " />
+                                    <input type="url" name="Photo" placeholder="  Photo url" defaultValue={Photo} className="input input-bordered w-full " />
 
                                 </label>
                             </div>

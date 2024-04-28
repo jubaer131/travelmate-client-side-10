@@ -18,6 +18,9 @@ import Mylist from './assets/pages/Mylist.jsx'
 import TouristSportDetailsCard from "./assets/pages/TouristSportDetailsCard.jsx"
 import UpdateTourCard from './assets/pages/UpdateTourCard.jsx'
 import AlltouristsportDetails from "./assets/pages/AlltouristsportDetails.jsx"
+import PrivateRout3 from './assets/firebase/PrivateRout3.jsx'
+
+
 
 
 const router = createBrowserRouter([
@@ -37,22 +40,22 @@ const router = createBrowserRouter([
       },
       {
         path: "/details/:id",
-        element: <AlltouristsportDetails></AlltouristsportDetails>,
-        loader: ({ params }) => fetch(`http://localhost:5000/tour/${params.id}`)
+        element: <PrivateRout3> <AlltouristsportDetails></AlltouristsportDetails></PrivateRout3>,
+        loader: ({ params }) => fetch(`http://localhost:5000/tourdetail/${params.id}`)
       },
       {
         path: "/addtouristsport",
-        element: <AddTouristSport></AddTouristSport>,
+        element: <PrivateRout3> <AddTouristSport></AddTouristSport></PrivateRout3>,
       },
       {
         path: "/mylist",
-        element: <Mylist></Mylist>,
+        element: <PrivateRout3> <Mylist></Mylist></PrivateRout3>,
 
       },
       {
         path: "updatetour/:id",
         element: <UpdateTourCard></UpdateTourCard>,
-        loader: ({ params }) => fetch(`http://localhost:5000/tour/${params.id}`)
+        loader: ({ params }) => fetch(`http://localhost:5000/updatetour/${params.id}`)
 
       },
       {

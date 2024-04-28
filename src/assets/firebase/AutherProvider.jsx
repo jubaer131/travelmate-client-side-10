@@ -13,6 +13,7 @@ export const authContest = createContext()
 const AuthProvider = ({ children }) => {
     const [user, setuser] = useState('')
     const [loading, setloading] = useState(true)
+
     const googleprovider = new GoogleAuthProvider();
     const GithubProvider = new GithubAuthProvider();
 
@@ -37,7 +38,7 @@ const AuthProvider = ({ children }) => {
     }
 
     const logout = () => {
-        setloading(false)
+        setloading(true)
         return signOut(auth)
     }
 
@@ -64,7 +65,7 @@ const AuthProvider = ({ children }) => {
 
     }, [])
 
-    const authinfo = { creatUser, creatregistation, user, logout, updateProfilePicture, setloading, googleSignin, githubSignin }
+    const authinfo = { creatUser, creatregistation, user, logout, updateProfilePicture, loading, setloading, googleSignin, githubSignin }
 
 
     return (

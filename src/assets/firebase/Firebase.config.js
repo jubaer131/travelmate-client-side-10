@@ -11,8 +11,17 @@ const firebaseConfig = {
   projectId: "travel-mate-dfde0",
   storageBucket: "travel-mate-dfde0.appspot.com",
   messagingSenderId: "276130735368",
-  appId: "1:276130735368:web:8d65687b319667bbe0f8bd"
+  appId: "1:276130735368:web:bfc61024c092a565e0f8bd"
 };
+console.log(import.meta.env.VITE_authDomain)
+// const firebaseConfig = {
+//   apiKey:import.meta.env.VITE_apiKey,
+//   authDomain:import.meta.env.VITE_authDomain,
+//   projectId:import.meta.env.VITE_projectId,
+//   storageBucket:import.meta.env.VITE_storageBucket,
+//   messagingSenderId:import.meta.env.VITE_messagingSenderId,
+//   appId:import.meta.env.VITE_appId,
+// };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);

@@ -9,6 +9,7 @@ export default {
   },
   plugins: [require("daisyui")],
   daisyui: {
-    themes: ["light", "retro" ],
+    themes: ["light", "retro"],
   },
+
 }
