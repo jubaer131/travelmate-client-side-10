@@ -37,7 +37,7 @@ const AddTouristSport = () => {
                 if (data.insertedId) {
                     Swal.fire({
                         title: 'success',
-                        text: 'user added succeesfully',
+                        text: 'Card added succeesfully',
                         icon: 'success',
                         confirmButtonText: 'Cool'
 

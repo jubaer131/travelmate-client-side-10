@@ -38,7 +38,7 @@ const Navbar = () => {
         </NavLink>
         <NavLink
             to='/mylist' className={({ isActive }) => isActive ? 'text-[16px] text-violet-500 font-medium    border-green-500 mr-5 ' : 'text-[16px] font-medium  border-green-400 mr-5 '} >
-            My list
+            My List
         </NavLink>
         <button className="">
             <label className="cursor-pointer grid place-items-center ">
