@@ -10,7 +10,7 @@ const Footer = () => {
 
 
     return (
-        <footer className="footer footer-center p-10 bg-rose-200 text-base-content rounded mb-6 w-full shadow-xl">
+        <footer className="footer footer-center p-4 bg-rose-200 text-base-content rounded mb-6 w-full shadow-sm md:mt-8">
             <h1 className="text-2xl font-bold text-center">Travelmate</h1>
             <nav className="grid grid-flow-col gap-4">
                 <Link className="text-sky-700 text-[16px]" to="/">Home</Link>

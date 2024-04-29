@@ -19,11 +19,15 @@ import TouristSportDetailsCard from "./assets/pages/TouristSportDetailsCard.jsx"
 import UpdateTourCard from './assets/pages/UpdateTourCard.jsx'
 import AlltouristsportDetails from "./assets/pages/AlltouristsportDetails.jsx"
 import PrivateRout3 from './assets/firebase/PrivateRout3.jsx'
-import Countries from './assets/pages/Countries.jsx'
+
 
 import Card1 from './assets/component/Card1.jsx'
-
-
+import Card11Details from './assets/pages/Card11Details.jsx'
+import Card2 from './assets/pages/Card2.jsx'
+import Card3 from './assets/pages/Card3.jsx'
+import Card4 from './assets/pages/Card4.jsx'
+import Card5 from "./assets/pages/Card5.jsx"
+import Card6 from './assets/pages/Card6.jsx'
 
 
 const router = createBrowserRouter([
@@ -74,7 +78,60 @@ const router = createBrowserRouter([
         element: <TouristSportDetailsCard></TouristSportDetailsCard>,
         loader: ({ params }) => fetch(`https://travel-mate-server-kappa.vercel.app/sport/${params.id}`)
       },
-
+      {
+        path: "/card1",
+        element: <Card1></Card1>,
+      },
+      {
+        path: "/card11/:id",
+        element: <Card11Details></Card11Details>,
+        loader: ({ params }) => fetch(`https://travel-mate-server-kappa.vercel.app/sport/${params.id}`)
+      },
+      {
+        path: "/card2",
+        element: <Card2></Card2>,
+      },
+      {
+        path: "/card22/:id",
+        element: <Card11Details></Card11Details>,
+        loader: ({ params }) => fetch(`https://travel-mate-server-kappa.vercel.app/updatetour/${params.id}`)
+      },
+      {
+        path: "/card3",
+        element: <Card3></Card3>,
+      },
+      {
+        path: "/card33/:id",
+        element: <Card11Details></Card11Details>,
+        loader: ({ params }) => fetch(`https://travel-mate-server-kappa.vercel.app/sport/${params.id}`)
+      },
+      {
+        path: "/card4",
+        element: <Card4></Card4>,
+      },
+      {
+        path: "/card44/:id",
+        element: <Card11Details></Card11Details>,
+        loader: ({ params }) => fetch(`https://travel-mate-server-kappa.vercel.app/updatetour/${params.id}`)
+      },
+      {
+        path: "/card5",
+        element: <Card5></Card5>,
+      },
+      {
+        path: "/card55/:id",
+        element: <Card11Details></Card11Details>,
+        loader: ({ params }) => fetch(`https://travel-mate-server-kappa.vercel.app/updatetour/${params.id}`)
+      },
+      {
+        path: "/card6",
+        element: <Card6></Card6>,
+      },
+      {
+        path: "/card66/:id",
+        element: <Card11Details></Card11Details>,
+        loader: ({ params }) => fetch(`https://travel-mate-server-kappa.vercel.app/updatetour/${params.id}`)
+      },
     ],
   },
 

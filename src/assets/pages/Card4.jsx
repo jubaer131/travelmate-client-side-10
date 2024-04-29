@@ -1,18 +1,18 @@
 
 import { useEffect, useState } from "react";
-import Card11 from "../pages/Card11";
+import Card44 from "../pages/Card11";
 
-const Card1 = () => {
+const Card4 = () => {
 
     const [ban, setban] = useState([])
 
     useEffect(() => {
 
-        fetch('https://travel-mate-server-kappa.vercel.app/sport')
+        fetch('https://travel-mate-server-kappa.vercel.app/tour')
             .then(res => res.json())
             .then(data => {
                 console.log(data)
-                const info = data.filter(item => item.country === 'Bangladesh')
+                const info = data.filter(item => item.country === 'Indonesia')
                 setban(info)
 
             })
@@ -24,10 +24,10 @@ const Card1 = () => {
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
             {
-                ban.map(data => <Card11 data={data}></Card11>)
+                ban.map(data => <Card44 data={data}></Card44>)
             }
         </div>
     );
 };
 
-export default Card1;
+export default Card4;

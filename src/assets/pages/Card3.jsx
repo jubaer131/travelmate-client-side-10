@@ -1,8 +1,8 @@
 
 import { useEffect, useState } from "react";
-import Card11 from "../pages/Card11";
+import Card33 from "../pages/Card11";
 
-const Card1 = () => {
+const Card3 = () => {
 
     const [ban, setban] = useState([])
 
@@ -12,7 +12,7 @@ const Card1 = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data)
-                const info = data.filter(item => item.country === 'Bangladesh')
+                const info = data.filter(item => item.country === 'Malaysia')
                 setban(info)
 
             })
@@ -24,10 +24,10 @@ const Card1 = () => {
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
             {
-                ban.map(data => <Card11 data={data}></Card11>)
+                ban.map(data => <Card33 data={data}></Card33>)
             }
         </div>
     );
 };
 
-export default Card1;
+export default Card3;
