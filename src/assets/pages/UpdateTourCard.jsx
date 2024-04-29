@@ -30,7 +30,7 @@ const UpdateTourCard = () => {
         const newsport = { name, country, location, description, cost, seasonality, traveltime, email, username, visitor, Photo, }
         console.log(newsport)
 
-        fetch(`http://localhost:5000/updatetour/${_id}`, {
+        fetch(`https://travel-mate-server-kappa.vercel.app/updatetour/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

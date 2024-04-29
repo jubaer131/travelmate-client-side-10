@@ -19,6 +19,9 @@ import TouristSportDetailsCard from "./assets/pages/TouristSportDetailsCard.jsx"
 import UpdateTourCard from './assets/pages/UpdateTourCard.jsx'
 import AlltouristsportDetails from "./assets/pages/AlltouristsportDetails.jsx"
 import PrivateRout3 from './assets/firebase/PrivateRout3.jsx'
+import Countries from './assets/pages/Countries.jsx'
+
+import Card1 from './assets/component/Card1.jsx'
 
 
 
@@ -36,12 +39,12 @@ const router = createBrowserRouter([
       {
         path: "/alltouristsport",
         element: <AllTouristSport></AllTouristSport>,
-        loader: () => fetch('http://localhost:5000/tour')
+        loader: () => fetch('https://travel-mate-server-kappa.vercel.app/tour')
       },
       {
         path: "/details/:id",
         element: <PrivateRout3> <AlltouristsportDetails></AlltouristsportDetails></PrivateRout3>,
-        loader: ({ params }) => fetch(`http://localhost:5000/tourdetail/${params.id}`)
+        loader: ({ params }) => fetch(`https://travel-mate-server-kappa.vercel.app/tourdetail/${params.id}`)
       },
       {
         path: "/addtouristsport",
@@ -55,7 +58,7 @@ const router = createBrowserRouter([
       {
         path: "updatetour/:id",
         element: <UpdateTourCard></UpdateTourCard>,
-        loader: ({ params }) => fetch(`http://localhost:5000/updatetour/${params.id}`)
+        loader: ({ params }) => fetch(`https://travel-mate-server-kappa.vercel.app/updatetour/${params.id}`)
 
       },
       {
@@ -69,11 +72,19 @@ const router = createBrowserRouter([
       {
         path: "/touristsport/:id",
         element: <TouristSportDetailsCard></TouristSportDetailsCard>,
-        loader: ({ params }) => fetch(`http://localhost:5000/sport/${params.id}`)
+        loader: ({ params }) => fetch(`https://travel-mate-server-kappa.vercel.app/sport/${params.id}`)
       },
 
     ],
   },
+
+
+
+
+
+
+
+
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

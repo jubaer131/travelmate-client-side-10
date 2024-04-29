@@ -7,7 +7,7 @@ const TouristSport = () => {
     const [item, setitem] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/sport')
+        fetch('https://travel-mate-server-kappa.vercel.app/sport')
             .then(res => res.json())
             .then(data => {
                 console.log(data)

@@ -24,7 +24,7 @@ const AddTouristSport = () => {
         const newtour = { name, country, location, description, cost, seasonality, traveltime, email, username, visitor, Photo }
         console.log(newtour)
 
-        fetch('http://localhost:5000/tour', {
+        fetch('https://travel-mate-server-kappa.vercel.app/tour', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

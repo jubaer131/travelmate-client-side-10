@@ -9,7 +9,7 @@ const Mylist = () => {
     const [items, setitems] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/tour/${user?.email}`)
+        fetch(`https://travel-mate-server-kappa.vercel.app/tour/${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 setitems(data)

@@ -11,7 +11,7 @@ const Navbar = () => {
 
     const handleToggle = e => {
         if (e.target.checked) {
-            settheme('retro')
+            settheme('dark')
 
         } else {
             settheme('light')

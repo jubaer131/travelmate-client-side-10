@@ -43,21 +43,21 @@ const MylistCard = ({ item, items, setitems }) => {
 
 
     return (
-        <div className="container grid gap-6 mx-auto text-center lg:grid-cols-2 xl:grid-cols-5 mt-5">
-            <div className="w-full px-6 py-16 rounded-md sm:px-12 md:px-16 xl:col-span-2 dark:bg-gray-50">
-                <span className="block mb-2 dark:text-violet-600 text-3xl font-bold">  {name}</span>
-                <h1 className="text-2xl font-semibold dark:text-gray-900">{country}</h1>
+        <div className="container grid gap-6 mx-auto  lg:grid-cols-2 xl:grid-cols-5 mt-5 ">
+            <div className="w-full px-6 py-16 rounded-md sm:px-12 md:px-16 xl:col-span-2 dark:bg-gray-50 ">
+                <span className="block mb-2 dark:text-violet-600 text-3xl font-bold ">  {name}</span>
+                <h1 className="text-2xl font-semibold dark:text-gray-900 ">{country}</h1>
                 <p className="my-8">
                     <span className="font-medium dark:text-gray-900">Description :</span>{description}
                 </p>
-                <div className="space-y-4">
+                <div className="space-y-4 text-start">
                     <p>Location : {location}</p>
                     <p>Travel time :{traveltime}</p>
                     <p>Average Cost : {cost}</p>
                 </div>
-                <div className="space-y-4">
+                <div className="space-y-4 text-start">
                     <h1>User name : {username}</h1>
-                    <h1>Email : {email}</h1>
+
                     <div className="space-x-5">
 
                         <Link to={`/updatetour/${_id}`}>
