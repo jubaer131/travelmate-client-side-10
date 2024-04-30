@@ -64,7 +64,7 @@ const Login = () => {
         <div>
 
 
-            <div className="hero min-h-screen bg-base-200 bg-[url('https://i.ibb.co/ZHPfK4T/modern-business-center.jpg')] bg-cover">
+            <div className="hero min-h-screen bg-base-200 bg-[url('https://i.ibb.co/2vSwSXJ/aaron-burden-b9dr-VB7x-IOI-unsplash.jpg')] bg-cover">
 
                 <div className="hero-content flex-col lg:w-[800px]">
                     <div className="text-center lg:text-left">
@@ -101,7 +101,7 @@ const Login = () => {
 
 
                             <div className="form-control mt-6">
-                                <button className="btn btn-accent">Login</button>
+                                <button className="btn bg-violet-500 text-white">Login</button>
                             </div>
                             <ToastContainer />
                         </form>
@@ -109,8 +109,8 @@ const Login = () => {
 
                         <p className="px-3 text-[16px] text-center dark:text-gray-600">Login with social accounts</p>
                         <div className="flex justify-between my-5 px-8">
-                            <button onClick={handlegoogle} className="btn btn-accent"><FaGoogle></FaGoogle> Google  </button>
-                            <button onClick={handlegithub} className="btn btn-accent"><FaGithub></FaGithub> github  </button>
+                            <button onClick={handlegoogle} className="btn bg-violet-500 text-white"><FaGoogle></FaGoogle> Google  </button>
+                            <button onClick={handlegithub} className="btn bg-violet-500 text-white"><FaGithub></FaGithub> github  </button>
                         </div>
                         <p className='text-center pb-4 mb-6 px-5'>Don't have an account please  <Link className='text-green-500' to="/register">Register now</Link></p>
                     </div>

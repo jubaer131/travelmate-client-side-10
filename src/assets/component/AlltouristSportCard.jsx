@@ -24,7 +24,7 @@ const AlltouristSportCard = ({ item }) => {
                     </div>
                     <div className="space-y-3">
                         <a rel="noopener noreferrer" href="#" className="block">
-                            <h3 className="text-xl font-semibold dark:text-violet-600 mb-6 text-3xl font-bold">{name}</h3>
+                            <h3 className="text-xl font-semibold dark:text-violet-600 mb-6">{name}</h3>
                         </a>
                         <div className="flex gap-8">
                             <p className="leading-snug dark:text-gray-600 text-[15px]"> Country : {country}</p>
@@ -36,7 +36,7 @@ const AlltouristSportCard = ({ item }) => {
                         </div>
                         <div className="mt-5">
                             <Link to={`/details/${_id}`}>
-                                <button className="btn bg-violet-400">View details</button>
+                                <button className="btn bg-violet-600 text-white">View details</button>
                             </Link>
                         </div>
 

@@ -61,7 +61,7 @@ const MylistCard = ({ item, items, setitems }) => {
                     <div className="space-x-5">
 
                         <Link to={`/updatetour/${_id}`}>
-                            <button className="btn bg-teal-400">Update</button>
+                            <button className="btn bg-teal-500 text-white">Update</button>
                         </Link>
                         <button onClick={() => handleDelete(_id)} className="btn bg-violet-500 text-white">Delete</button>
                     </div>

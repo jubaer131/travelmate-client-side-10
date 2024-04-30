@@ -1,6 +1,6 @@
 import { useLoaderData } from "react-router-dom";
 import { IoLocationSharp } from "react-icons/io5";
-import { GiFamilyHouse } from "react-icons/gi";
+import { SlCalender } from "react-icons/sl";
 import { IoIosPricetag } from "react-icons/io";
 import { FaDollarSign } from "react-icons/fa";
 
@@ -19,7 +19,7 @@ const AlltouristsportDetails = () => {
 
                 <div className=" lg:w-6/12 p-6">
                     <div className="  mx-auto space-y-16 ">
-                        <article className="space-y-4  text-black">
+                        <article className="space-y-4  ">
                             <div className="space-y-6">
                                 <h1 className="text-4xl font-bold md:tracking-tight md:text-5xl"></h1>
                                 <h2 className="text-[20px] font-medium">Tourist sport name : {name}</h2>
@@ -33,16 +33,16 @@ const AlltouristsportDetails = () => {
                         </article>
                         <div>
                             <div className="flex flex-wrap items-center justify-start md:gap-24 mb-5">
-                                <h2 className="flex items-center gap-4"><IoIosPricetag></IoIosPricetag> <span className="text-[20px] font-medium">Total cost :  </span>  {cost}</h2>
-                                <h2 className="flex items-center gap-4"> <FaDollarSign></FaDollarSign> <span className="text-[20px] font-medium"> Travel time  :  </span>  {traveltime}</h2>
+                                <h2 className="flex items-center gap-4">  <FaDollarSign></FaDollarSign> <span className="text-[20px] font-medium">Total cost :  </span>  {cost}</h2>
+                                <h2 className="flex items-center gap-4"> <IoIosPricetag></IoIosPricetag> <span className="text-[20px] font-medium"> Travel time  :  </span>  {traveltime}</h2>
 
                             </div>
                             <div className="space-y-5 ">
                                 <hr className=" border-t border-dashed border-gray-400" />
 
-                                <p className="flex  items-center gap-4"> <GiFamilyHouse></GiFamilyHouse><span className="text-[20px] font-medium"> Location :   </span> {location}</p>
-                                <p className="flex  items-center gap-4"> <GiFamilyHouse></GiFamilyHouse><span className="text-[20px] font-medium"> seasonality :   </span> {seasonality}</p>
-                                <p className=""> <span> <span><IoLocationSharp className="text-green-500"></IoLocationSharp> </span> <span className="text-[20px] font-medium"> Total visitore par year : </span></span> <span> {visitor}</span> </p>
+                                <p className="flex  items-center gap-4">   <IoLocationSharp className="text-green-500"></IoLocationSharp> <span className="text-[20px] font-medium"> Location :   </span> {location}</p>
+                                <p className="flex  items-center gap-4"><SlCalender /> <span className="text-[20px] font-medium"> seasonality :   </span> {seasonality}</p>
+                                <p className=""> <span> <span></span> <span className="text-[20px] font-medium"> Total visitore par year : </span></span> <span> {visitor}</span> </p>
 
 
                             </div>

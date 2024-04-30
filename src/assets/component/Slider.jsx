@@ -20,7 +20,7 @@ const Slider = () => {
         >
             <SwiperSlide>
                 <div class="bg-[url('https://i.ibb.co/Zhzs9R0/sean-oulashin-KMn4-VEe-EPR8-unsplash.jpg')] bg-cover min-h-[400px] md:min-h-[650px] rounded-2xl">
-                    <h1 className='text-center pt-28 md:text-4xl font-bold'>Welcome to travelmate  </h1>
+                    <h1 className='text-center pt-28 md:text-4xl font-bold text-violet-500'>Welcome to travelmate  </h1>
                 </div>
 
             </SwiperSlide>

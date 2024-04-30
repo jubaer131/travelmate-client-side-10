@@ -89,7 +89,7 @@ const Register = () => {
     }
 
     return (
-        <div className=" mx-auto bg-[url('https://i.ibb.co/wSwsGFQ/juho-luomala-j-Pkv8ta-RWM8-unsplash.jpg')] bg-cover min-h-screen">
+        <div className=" mx-auto bg-[url('https://i.ibb.co/KVqpHXK/sean-oulashin-KMn4-VEe-EPR8-unsplash.jpg')] bg-cover min-h-screen">
 
 
             <div className="hero  ">
@@ -143,7 +143,7 @@ const Register = () => {
 
 
                             <div className="form-control mt-6">
-                                <button className="btn btn-accent">Register</button>
+                                <button className="btn bg-violet-600 text-white">Register</button>
                             </div>
                             <ToastContainer />
                         </form>

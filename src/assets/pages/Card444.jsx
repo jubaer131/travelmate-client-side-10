@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 
 
-const Card11 = ({ data }) => {
+const Card444 = ({ data }) => {
 
     const { Photo, cost, country, description, email, location, seasonality, name,
         traveltime, username, visitor, _id } = data
@@ -29,11 +29,11 @@ const Card11 = ({ data }) => {
                         <p className="leading-snug dark:text-gray-600">{description.slice(0, 180)}</p>
 
                     </div>
-                    <Link to={`/card11/${_id}`}><button className="btn btn-primary mt-5">View details</button></Link>
+                    <Link to={`/card44/${_id}`}><button className="btn btn-primary mt-5">View details</button></Link>
                 </div>
             </div>
         </div>
     );
 };
 
-export default Card11;
+export default Card444;
