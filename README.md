@@ -14,17 +14,17 @@
 [Server repository](https://github.com/jubaer131/travelmate-server-side-10.git)
 
 # Key Features 
-### Homepage:
+** Home page
 
 * Welcomes visitors and introduces Travelmate.
 * Highlights featured destinations, current promotions, and travel packages.
-* Call-to-action buttons for searching destinations or contacting the agency.
-### Travel Packages:
+
+**  Travel Packages:
 
 * Browse and search for travel packages categorized by destination, theme (e.g., adventure, luxury), or season.
 * Detailed descriptions, itineraries, pricing, and booking options for each package.
 
-### Destinations Guide:
+** Destinations Guide:
 
 * Information about popular travel destinations, including attractions, local culture, dining options, and travel tips.
 * Interactive maps or galleries showcasing destination highlights.
