@@ -27,7 +27,7 @@
 ** Destinations Guide:
 
 * Information about popular travel destinations, including attractions, local culture, dining options, and travel tips.
-* Interactive maps or galleries showcasing destination highlights.
+
   
 # Technology Stack:
 
@@ -41,7 +41,6 @@
 * Install Dependencies: Run npm install.
 * Setup Environment Variables: Create .env file if needed.
 * Run the Project: Follow README instructions, npm start.
- This setup enables cloning, setup, and local development of Travelmate, focusing on efficient travel planning and customer engagement.
 
 
 
