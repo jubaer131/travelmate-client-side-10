@@ -12,7 +12,7 @@
 [server repository]()
 
 # Key Features 
-## Homepage:
+### Homepage:
 
 * Welcomes visitors and introduces Travelmate.
 * Highlights featured destinations, current promotions, and travel packages.
