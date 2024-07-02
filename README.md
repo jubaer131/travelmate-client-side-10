@@ -34,3 +34,26 @@
 * Frontend: HTML5, CSS3, JavaScript for dynamic content and interactive features.
 * Database:  MongoDB for storing travel package data and customer information.
 
+# Steps to Clone the Repository
+
+* Navigate into the Cloned Directory:
+
+Open a terminal or command prompt.
+Use the cd command to enter the cloned repository directory
+
+* Install Dependencies:
+
+Check if there's a package.json file (for Node.js projects) or any other dependency manifest.
+npm install
+
+* Setup Environment Variables (if needed):
+
+Some projects require environment variables for configuration (e.g., API keys, database credentials).
+Create a .env file if it's not provided and set necessary variables. Make sure not to commit sensitive information to version control.
+*  Run the Project:
+
+Follow instructions in the project's README or documentation to start the application. This could involve running a development server or executing build scripts.
+npm start
+
+
+
