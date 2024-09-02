@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from "react";
-import Card444 from "../pages/Card11";
+import Card44 from '../pages/Card44'
 
 const Card4 = () => {
 
@@ -24,7 +24,7 @@ const Card4 = () => {
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
             {
-                ban.map(data => <Card444 data={data}></Card444>)
+                ban.map(data => <Card44 data={data}></Card44>)
             }
         </div>
     );

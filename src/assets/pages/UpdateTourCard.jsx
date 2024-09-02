@@ -4,6 +4,7 @@ import { useContext } from 'react';
 import Swal from 'sweetalert2'
 import { authContest } from '../firebase/AutherProvider';
 import { useLoaderData } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 
 
@@ -52,6 +53,7 @@ const UpdateTourCard = () => {
     }
     return (
         <div>
+            <Helmet><title>Update tour card</title></Helmet>
             <h1 className="text-green-500 text-3xl text-center">Update the Card</h1>
 
             <section className="p-10 dark:bg-gray-100 dark:text-gray-900 shadow-xl">

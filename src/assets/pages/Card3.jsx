@@ -8,7 +8,7 @@ const Card3 = () => {
 
     useEffect(() => {
 
-        fetch('https://travel-mate-server-kappa.vercel.app/sport')
+        fetch('https://travel-mate-server-kappa.vercel.app/tour')
             .then(res => res.json())
             .then(data => {
                 console.log(data)

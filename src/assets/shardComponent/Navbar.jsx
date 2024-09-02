@@ -7,9 +7,21 @@ import { authContest } from "../firebase/AutherProvider";
 const Navbar = () => {
 
     const [theme, settheme] = useState("light");
+    const { user, logout, loading } = useContext(authContest)
 
+
+
+    const handlelogout = () => {
+        logout()
+            .then(result => {
+                console.log(result.user)
+            })
+            .catch(error => {
+                console.error(error)
+            })
+    }
     const handleToggle = e => {
-        e.preventDefault()
+
 
         if (e.target.checked) {
             settheme('dark')
@@ -54,24 +66,15 @@ const Navbar = () => {
         </button>
 
     </>
-    const { user, logout } = useContext(authContest)
 
 
-    const handlelogout = () => {
-        logout()
-            .then(result => {
-                console.log(result.user)
-            })
-            .catch(error => {
-                console.error(error)
-            })
-    }
+
 
 
 
 
     return (
-        <div className="navbar  rounded-t-lg md:shadow-xl mt-8 mb-3 rounded-xl">
+        <div className="navbar container mx-auto py-2  ">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -112,6 +115,7 @@ const Navbar = () => {
 
             </div>
         </div>
+
     );
 };
 

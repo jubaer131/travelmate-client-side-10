@@ -7,6 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { FaGoogle } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import { authContest } from "../firebase/AutherProvider";
+import { Helmet } from "react-helmet";
 
 
 const Login = () => {
@@ -62,7 +63,7 @@ const Login = () => {
 
     return (
         <div>
-
+            <Helmet><title>Login </title></Helmet>
 
             <div className="hero min-h-screen bg-base-200 bg-[url('https://i.ibb.co/2vSwSXJ/aaron-burden-b9dr-VB7x-IOI-unsplash.jpg')] bg-cover">
 

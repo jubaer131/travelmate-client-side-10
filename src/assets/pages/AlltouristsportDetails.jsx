@@ -3,6 +3,7 @@ import { IoLocationSharp } from "react-icons/io5";
 import { SlCalender } from "react-icons/sl";
 import { IoIosPricetag } from "react-icons/io";
 import { FaDollarSign } from "react-icons/fa";
+import { Helmet } from "react-helmet";
 
 const AlltouristsportDetails = () => {
 
@@ -12,6 +13,7 @@ const AlltouristsportDetails = () => {
     console.log(details)
     return (
         <div>
+            <Helmet><title>All tourist sport details</title></Helmet>
             <div className="card lg:card-side bg-base-100 shadow-xl gap-6 px-8 mt-10 container mx-auto">
                 <div className="lg:w-6/12 ">
                     <figure><img className="w-full md:h-[650px] bg-cover bg-no-repeat rounded-3xl" src={Photo} alt="Album" /></figure>

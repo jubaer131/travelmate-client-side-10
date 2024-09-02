@@ -19,8 +19,7 @@ import TouristSportDetailsCard from "./assets/pages/TouristSportDetailsCard.jsx"
 import UpdateTourCard from './assets/pages/UpdateTourCard.jsx'
 import AlltouristsportDetails from "./assets/pages/AlltouristsportDetails.jsx"
 import PrivateRout3 from './assets/firebase/PrivateRout3.jsx'
-
-
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 import Card1 from './assets/component/Card1.jsx'
 import Card11Details from './assets/pages/Card11Details.jsx'
 import Card2 from './assets/pages/Card2.jsx'
@@ -28,7 +27,6 @@ import Card3 from './assets/pages/Card3.jsx'
 import Card4 from './assets/pages/Card4.jsx'
 import Card5 from "./assets/pages/Card5.jsx"
 import Card6 from './assets/pages/Card6.jsx'
-
 
 const router = createBrowserRouter([
   {
@@ -146,8 +144,10 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <AuthProvider>
-      <RouterProvider router={router} />
-    </AuthProvider>
+    <HelmetProvider>
+      <AuthProvider>
+        <RouterProvider router={router} />
+      </AuthProvider>
+    </HelmetProvider>
   </React.StrictMode>,
 )

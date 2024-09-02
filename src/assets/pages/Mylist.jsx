@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { authContest } from "../firebase/AutherProvider";
 import MylistCard from "./MylistCard";
+import { Helmet } from "react-helmet";
 
 
 const Mylist = () => {
@@ -20,6 +21,7 @@ const Mylist = () => {
 
     return (
         <section className="p-6 dark:bg-gray-100 dark:text-gray-800">
+            <Helmet><title>My list</title></Helmet>
             {
                 items?.map(item => <MylistCard item={item} items={items} setitems={setitems}></MylistCard>)
             }

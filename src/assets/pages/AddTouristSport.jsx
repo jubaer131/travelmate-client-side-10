@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import Swal from 'sweetalert2'
 import { authContest } from '../firebase/AutherProvider';
+import { Helmet } from 'react-helmet';
 
 const AddTouristSport = () => {
 
@@ -48,6 +49,7 @@ const AddTouristSport = () => {
     }
     return (
         <div>
+            <Helmet><title>Add tourist sport</title></Helmet>
             <h1 className="text-violet-500 text-4xl font-semibold text-center mt-8">Add tourist sport</h1>
             <div className="space-y-3 max-w-96 mx-auto text-center ">
                 <p className="font-medium text-xl">Welcome to the Travelmate agency </p>
