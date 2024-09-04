@@ -10,7 +10,7 @@ import 'swiper/css/navigation';
 
 // import required modules
 import { Keyboard, Pagination, Navigation } from 'swiper/modules';
-import { FaUmbrellaBeach } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaUmbrellaBeach } from 'react-icons/fa';
 
 
 
@@ -118,22 +118,29 @@ const Slider = () => {
                 <div className='w-full h-full  lg:flex justify-start items-center gap-5  bg-white p-6'>
 
                     <div className='py-5 space-y-2'>
-                        <div>
+                        <div className='relative'>
+
                             <select className="select select-bordered rounded-none  max-sm:w-full w-[250px] 
 ">
-                                <option disabled selected>Normal</option>
-                                <option>Normal Apple</option>
-                                <option>Normal Orange</option>
-                                <option>Normal Tomato</option>
+                                <option disabled selected> Destination</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
                             </select>
                         </div>
                         <div>
                             <select className="select select-bordered rounded-none max-sm:w-full  w-[250px]  ">
-                                <option disabled selected>Normal</option>
-                                <option>Normal Apple</option>
-                                <option>Normal Orange</option>
-                                <option>Normal Tomato</option>
+                                <option disabled selected>Type</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
                             </select>
+
+
                         </div>
 
                     </div>
@@ -157,11 +164,11 @@ const Slider = () => {
                             onChange={(e) => setPrice(e.target.value)}
                             className="w-full "
                         />
-                        <div className=' text-gray-700 flex justify-between items-center'>
+                        <div className=' text-gray-700 flex justify-between items-center text-sm'>
                             <p> ${price}</p>
                             <p>$200</p>
                         </div>
-                        <button className='btn  w-full bg-red-400'>Search</button>
+                        <button className='btn p-0 m-0 my-[6px] w-full bg-[#d91f53] text-[16px] rounded-none text-white hover:bg-white hover:text-[#d91f53]'>SEARCH</button>
                     </div>
                 </div>
 

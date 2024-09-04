@@ -1,17 +1,19 @@
+import { SlDiamond } from "react-icons/sl";
 import { Link } from "react-router-dom";
 
 
 const Countries = () => {
     return (
 
-        <div className="">
-            <h1 className="text-center text-4xl font-bold mt-10 mb-2">Countries</h1>
-            <p className="text-2xl text-center font-normal mb-10">Now is the moment to choose your preferred travel destination.</p>
+        <div className="container mx-auto mt-40">
+            <h1 className='text-4xl font-bold text-center'>Top Destinations</h1>
+            <div className="divider divider-neutral w-[40%] border-white mx-auto"><SlDiamond className="text-6xl  " /></div>
+            <p className="text-center mb-20">Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br /> sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Duis aute irure dolor in reprehenderit..</p>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-2">
                 <Link to="/card1">
 
-                    <div className="hero  shadow-2xl" style={{ backgroundImage: 'url(https://i.ibb.co/QrjvjQC/manzur-alam-jxz7-Fe1btc-unsplash.jpg)' }}>
+                    <div className="hero  shadow-2xl" style={{ backgroundImage: 'url(https://i.ibb.co/QrjvjQC/manzur-alam-jxz7-Fe1btc-unsplash.jpg)' }} >
                         <div className=""></div>
                         <div className="hero-content text-center text-neutral-content">
                             <div className="max-w-md h-72">
@@ -22,8 +24,8 @@ const Countries = () => {
 
                     </div>
                 </Link>
-                <Link to="/card2">
-                    <div className="hero shadow-2xl" style={{ backgroundImage: 'url(https://i.ibb.co/KVqpHXK/sean-oulashin-KMn4-VEe-EPR8-unsplash.jpg)' }}>
+                <Link className="grid  row-span-2" to="/card2">
+                    <div className="hero shadow-2xl " style={{ backgroundImage: 'url(https://i.ibb.co/KVqpHXK/sean-oulashin-KMn4-VEe-EPR8-unsplash.jpg)' }}>
                         <div className=""></div>
                         <div className="hero-content text-center text-neutral-content">
                             <div className="max-w-md h-72">
@@ -33,7 +35,7 @@ const Countries = () => {
                         </div>
                     </div>
                 </Link>
-                <Link to="/card3">
+                {/* <Link to="/card3">
                     <div className="hero shadow-2xl" style={{ backgroundImage: 'url(https://i.ibb.co/Y8pmfjS/meric-dagli-Hx-Jv-FZGf-SHM-unsplash.jpg)' }}>
                         <div className=""></div>
                         <div className="hero-content text-center text-neutral-content">
@@ -43,7 +45,7 @@ const Countries = () => {
                             </div>
                         </div>
                     </div>
-                </Link>
+                </Link> */}
                 <Link to="/card4">
                     <div className="hero shadow-2xl" style={{ backgroundImage: 'url(https://i.ibb.co/8bW9Fh9/tran-phu-y-PP08-FAft7-I-unsplash.jpg)' }}>
                         <div className=""></div>
@@ -66,7 +68,7 @@ const Countries = () => {
                         </div>
                     </div>
                 </Link>
-                <Link to="/card6">
+                <Link className="" to="/card6">
                     <div className="hero shadow-2xl" style={{ backgroundImage: 'url(https://i.ibb.co/Kz2ZrJg/george-bakos-Ov-Er7-Bw-Xxxg-unsplash.jpg)' }}>
                         <div className=""></div>
                         <div className="hero-content text-center text-neutral-content">
