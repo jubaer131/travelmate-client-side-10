@@ -5,10 +5,10 @@ import { Link } from "react-router-dom";
 const Countries = () => {
     return (
 
-        <div className="container mx-auto mt-40">
+        <div className="max-w-7xl mx-auto mt-40">
             <h1 className='text-4xl font-bold text-center'>Top Destinations</h1>
             <div className="divider divider-neutral w-[40%] border-white mx-auto"><SlDiamond className="text-6xl  " /></div>
-            <p className="text-center mb-20">Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br /> sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Duis aute irure dolor in reprehenderit..</p>
+            <p className="text-center mb-20">Explore some of the world's top destinations that offer unique experiences and unforgettable memories. Start with Paris,<br /> France, where the iconic Eiffel Tower, charming streets, and world-class art museums await</p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-2">
                 <Link to="/card1">
@@ -35,17 +35,7 @@ const Countries = () => {
                         </div>
                     </div>
                 </Link>
-                {/* <Link to="/card3">
-                    <div className="hero shadow-2xl" style={{ backgroundImage: 'url(https://i.ibb.co/Y8pmfjS/meric-dagli-Hx-Jv-FZGf-SHM-unsplash.jpg)' }}>
-                        <div className=""></div>
-                        <div className="hero-content text-center text-neutral-content">
-                            <div className="max-w-md h-72">
-                                <h1 className="mt-28 text-4xl font-bold"> Malaysia</h1>
 
-                            </div>
-                        </div>
-                    </div>
-                </Link> */}
                 <Link to="/card4">
                     <div className="hero shadow-2xl" style={{ backgroundImage: 'url(https://i.ibb.co/8bW9Fh9/tran-phu-y-PP08-FAft7-I-unsplash.jpg)' }}>
                         <div className=""></div>

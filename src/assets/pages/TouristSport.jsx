@@ -24,17 +24,19 @@ const TouristSport = () => {
     }, []);
 
     return (
-        <section className="mt-52 max-w-7xl mx-auto ">
-            <h1 className="text-center text-4xl font-bold  mb-4 ">Popular Packages</h1>
-            <div className="divider divider-neutral w-[40%] mx-auto"><SlDiamond className="text-6xl" /></div>
-            <p className="text-center text-[17px]  mt-8 mb-12">
-                Explore our popular packages, blending adventure, relaxation, and culture. With comfortable stays, guided tours,<br /> and exclusive deals, each package is crafted for a memorable experience. Whether a romantic escape <br /> or a family trip, there's something for everyone
-            </p>
+        <section className="mt-52 max-sm:mt-[650px] mb-10 max-w-7xl mx-auto ">
+            <div className="max-sm:px-10">
+                <h1 className="text-center text-4xl font-bold  mb-4 ">Popular Packages</h1>
+                <div className="divider divider-neutral w-[40%] mx-auto"><SlDiamond className="text-6xl" /></div>
+                <p className="text-center text-[17px]  mt-8 mb-12">
+                    Explore our popular packages, blending adventure, relaxation, and culture. With comfortable stays, guided tours,<br /> and exclusive deals, each package is crafted for a memorable experience. Whether a romantic escape <br /> or a family trip, there's something for everyone
+                </p>
+            </div>
 
             {/* Swiper Slider for Tourist Spots */}
             <Swiper
                 slidesPerView={3} // Show 3 cards at a time
-                spaceBetween={30}
+                spaceBetween={40}
                 pagination={{
                     clickable: true,
                 }}

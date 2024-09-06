@@ -12,19 +12,21 @@ const AllTouristSport = () => {
             <Helmet>
                 <title>All tourist sport</title>
             </Helmet>
-            <div className="text-center">
-                <details className="dropdown ">
-                    <summary className="m-1 btn">Sort by</summary>
-                    <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
-                        <li><a>Bangladesh</a></li>
-                        <li><a>Malaysia</a></li>
-                        <li><a> Indonesia</a></li>
-                        <li><a>Vietnam</a></li>
-                        <li><a>Combodia</a></li>
-                        <li><a>Thailand:</a></li>
-                    </ul>
-                </details>
+
+            <div className="p-6 py-12 dark:bg-violet-600 dark:text-gray-50 bg-[url('https://i.ibb.co.com/swS6RfY/sad-contemplative-person-near-lake.jpg">
+                <div className="container mx-auto">
+                    <div className="flex  items-center justify-center">
+
+                        <div className="space-x-2 text-center py-2 lg:py-0">
+                            <span>Plus free shipping! Use code:</span>
+                            <span className="font-bold text-lg">MAMBA</span>
+                        </div>
+
+                    </div>
+                </div>
             </div>
+
+
             <div className="grid justify-center grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
 
                 {

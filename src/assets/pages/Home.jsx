@@ -19,7 +19,7 @@ const Home = () => {
             <Slider></Slider>
             <TouristSport></TouristSport>
             <div>
-                <Parallax blur={{ min: -15, max: 15 }} bgImage="https://i.ibb.co/yFxQ28v/close-up-man-smiling-nature-23-2150771119.jpg" bgImageAlt="the cat" strength={500}>
+                <Parallax blur={{ min: -15, max: 15 }} bgImage="https://i.ibb.co/12vnmK8/lohri-celebration-india-23-2151150911.jpg" bgImageAlt="the cat" strength={600}>
                     <LastMinuteDeals></LastMinuteDeals>
                 </Parallax>
 
@@ -28,7 +28,7 @@ const Home = () => {
                 <BucketList></BucketList>
             </div>
             <div >
-                <Parallax blur={{ min: -15, max: 15 }} bgImage="https://i.ibb.co/yFxQ28v/close-up-man-smiling-nature-23-2150771119.jpg" bgImageAlt="the cat" strength={500}>
+                <Parallax blur={{ min: -10, max: 20 }} bgImage="https://i.ibb.co/bJWYd17/group-people-sitting-by-sea-enjoying-beautiful-view-sunset-181624-14032.jpg" bgImageAlt="the cat" strength={600}>
                     <SailingThailand></SailingThailand>
                 </Parallax>
             </div>

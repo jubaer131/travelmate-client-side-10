@@ -2,6 +2,7 @@
 import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { authContest } from "../firebase/AutherProvider";
+import { BiLogOutCircle } from "react-icons/bi";
 
 
 const Navbar = () => {
@@ -38,23 +39,23 @@ const Navbar = () => {
     const links = <>
 
         <NavLink
-            to='/' className={({ isActive }) => isActive ? 'text-[16px] text-violet-500 font-medium    border-green-500 mr-6' : 'text-[16px] font-medium  border-green-500 mr-6 '}>
+            to='/' className={({ isActive }) => isActive ? 'text-[16px] text-[#005294] font-medium    border-green-500 mr-6' : 'text-[16px] font-medium  border-green-500 mr-6 '}>
             Home
         </NavLink>
 
 
         <NavLink
-            to="/alltouristsport" className={({ isActive }) => isActive ? 'text-[16px] text-violet-500 font-medium   border-green-500 mr-6 ' : 'text-[16px] font-medium  border-green-400 mr-6 '} >
+            to="/alltouristsport" className={({ isActive }) => isActive ? 'text-[16px] text-[#005294] font-medium   border-green-500 mr-6 ' : 'text-[16px] font-medium  border-green-400 mr-6 '} >
             All Tourist Sport
         </NavLink>
 
 
         <NavLink
-            to='/addtouristsport' className={({ isActive }) => isActive ? 'text-[16px] text-violet-500 font-medium    border-green-500 mr-6 ' : 'text-[16px] font-medium  border-green-400 mr-6 '} >
+            to='/addtouristsport' className={({ isActive }) => isActive ? 'text-[16px] text-[#005294] font-medium    border-green-500 mr-6 ' : 'text-[16px] font-medium  border-green-400 mr-6 '} >
             Add Tourist Sport
         </NavLink>
         <NavLink
-            to='/mylist' className={({ isActive }) => isActive ? 'text-[16px] text-violet-500 font-medium    border-green-500 mr-6 ' : 'text-[16px] font-medium  border-green-400 mr-6 '} >
+            to='/mylist' className={({ isActive }) => isActive ? 'text-[16px] text-[#005294] font-medium    border-green-500 mr-6 ' : 'text-[16px] font-medium  border-green-400 mr-6 '} >
             My List
         </NavLink>
         <button className="">
@@ -85,7 +86,7 @@ const Navbar = () => {
 
                     </ul>
                 </div>
-                <a className=" font-bold text-3xl ">Travelmate<span className="font-bold text-3xl text-white animate__animated animate__fadeInRightBig"></span></a>
+                <a className=" font-bold md:text-xl flex justify-center items-center gap-1">  <img className="h-12 w-12 rounded-full md:ml-5 " src="https://i.ibb.co/9rP4jqp/Green-Geometric-Adventure-Logo.png" alt="" /><span>TRAVELMATE</span></a>
 
             </div>
             <div className="navbar-center hidden lg:flex">
@@ -108,8 +109,21 @@ const Navbar = () => {
                             </button>
                         </div>
 
-                        <button onClick={handlelogout} className="btn  bg-violet-600 text-white text-[15px]">Logout </button>
-                    </> : <Link to="/login">  <a className="btn bg-violet-600 text-white text-[15px]">Login</a> </Link>
+                        {/* <button onClick={handlelogout} className="btn  bg-violet-600 text-white text-[15px]">Logout </button> */}
+                        <button onClick={handlelogout} className="relative px-5 py-2 font-medium  group  md:inline mb-2">
+                            <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform translate-x-0 -skew-x-[18deg] border border-[#005294] group-hover:border-[#005294] group-hover:skew-x-[18deg]"></span>
+                            <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform skew-x-[18deg] border border-[#005294] group-hover:border-[#005294] group-hover:-skew-x-[18deg]"></span>
+
+                            <span className="flex items-center justify-center gap-2 relative text-gray-900 "><BiLogOutCircle
+                                className="text-xl"></BiLogOutCircle> Logout</span>
+                        </button>
+                    </> : <Link to="/login">  <button onClick={handlelogout} className="relative px-5 py-2 font-medium  group  md:inline mb-2">
+                        <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform translate-x-0 -skew-x-[18deg] border border-[#005294] group-hover:border-[#005294] group-hover:skew-x-[18deg]"></span>
+                        <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform skew-x-[18deg] border border-[#005294] group-hover:border-[#005294] group-hover:-skew-x-[18deg]"></span>
+
+                        <span className="flex items-center justify-center gap-2 relative text-gray-900 "><BiLogOutCircle
+                            className="text-xl"></BiLogOutCircle>Signin</span>
+                    </button> </Link>
                 }
 
 

@@ -10,7 +10,11 @@ import 'swiper/css/navigation';
 
 // import required modules
 import { Keyboard, Pagination, Navigation } from 'swiper/modules';
-import { FaMapMarkerAlt, FaUmbrellaBeach } from 'react-icons/fa';
+import { FaUmbrellaBeach } from 'react-icons/fa';
+import { LuFileType } from 'react-icons/lu';
+import { FaLocationDot } from 'react-icons/fa6';
+import { BsCalendar2Date } from 'react-icons/bs';
+import { SlLocationPin } from 'react-icons/sl';
 
 
 
@@ -35,23 +39,15 @@ const Slider = () => {
             >
                 <SwiperSlide
                     className='bg-no-repeat bg-cover bg-center' style={{ backgroundImage: 'url(https://i.ibb.co/b7cndXd/close-up-man-smiling-nature-23-2150771119.jpg)' }}>
-                    <div className='flex justify-center items-center h-[650px] text-red-50 bg-black bg-opacity-50 pt-20'>
+                    <div className='flex justify-center items-center h-[650px] font-f text-red-50 bg-black bg-opacity-50 pt-20'>
                         <div className=' text-center'>
-                            <h1 className='font-medium text-[18px] mb-2'>WELCOME TO MEDTRAIL CAMP</h1>
-                            <h1 className='text-5xl px-5 font-semibold text-emerald-500'> YOUR HEALTH, OUR PRIORITY</h1>
-                            <p className='w-[70%] mx-auto mt-4 mb-7'>Providing expert care and medical services to ensure a healthier community.
-                                Join us in our mission to make healthcare accessible for everyone.</p>
+                            <h3 className='font-light font-Caveat text-[#a3d8f1]
+ text-[30px]  mb-2 '>Book a Ticket & Just Leave</h3>
+                            <h1 className='md:text-5xl text-3xl px-5 font-Caveat font-semibold text-[#dbd9d9]'> SEARCH YOUR NEXT DESTINATION</h1>
+
+                            <button className='btn p-0 m-0 my-[6px] mt-6 md:w-[20%] btn-ghost border border-white text-[16px] max-sm:font-light max-sm:p-4 rounded-none text-white hover:bg-[#d91f53] hover:text-white'>View Our Tour</button>
 
 
-                            <a href='/aboutUs' class="relative px-5 py-2 font-medium text-white group ">
-
-                                <span class="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform translate-x-0 -skew-x-12 bg-emerald-500 group-hover:bg-emerald-700 group-hover:skew-x-12"></span>
-                                <span class="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform skew-x-12 bg-emerald-500 group-hover:bg-emerald-700 group-hover:-skew-x-12"></span>
-                                <span class="absolute bottom-0 left-0 hidden w-10 h-20 transition-all duration-100 ease-out transform -translate-x-8 translate-y-10 bg-emerald-400 -rotate-12"></span>
-                                <span class="absolute bottom-0 right-0 hidden w-10 h-20 transition-all duration-100 ease-out transform translate-x-10 translate-y-8 bg-emerald-400 -rotate-12"></span>
-                                <span class="relative ">About Us</span>
-
-                            </a>
                         </div>
                     </div>
                 </SwiperSlide>
@@ -59,21 +55,14 @@ const Slider = () => {
                     className='bg-no-repeat bg-cover bg-center' style={{ backgroundImage: 'url(https://i.ibb.co/Zg0BqXm/Green-Photo-Nature-Traveling-You-Tube-Banner.png)' }}>
                     <div className='flex justify-center items-center h-[650px] text-red-50 bg-black bg-opacity-50 pt-20 relative'>
                         <div className=' text-center'>
-                            <h1 className='font-medium text-[18px] mb-2'>WELCOME TO MEDTRAIL CAMP</h1>
-                            <h1 className='text-5xl px-5 font-semibold text-emerald-500'> YOUR HEALTH, OUR PRIORITY</h1>
-                            <p className='w-[70%] mx-auto mt-4 mb-7'>Providing expert care and medical services to ensure a healthier community.
-                                Join us in our mission to make healthcare accessible for everyone.</p>
+                            <h3 className='font-light font-Caveat text-[#a3d8f1]
+ text-[30px]  mb-2'>Cost Friendly Pakage </h3>
+                            <h1 className='md:text-5xl text-3xl px-5 font-Caveat font-semibold text-[#dbd9d9]'>WE OFFER YOU BETTER DEALS</h1>
 
 
-                            <a href='/aboutUs' class="relative px-5 py-2 font-medium text-white group ">
 
-                                <span class="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform translate-x-0 -skew-x-12 bg-emerald-500 group-hover:bg-emerald-700 group-hover:skew-x-12"></span>
-                                <span class="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform skew-x-12 bg-emerald-500 group-hover:bg-emerald-700 group-hover:-skew-x-12"></span>
-                                <span class="absolute bottom-0 left-0 hidden w-10 h-20 transition-all duration-100 ease-out transform -translate-x-8 translate-y-10 bg-emerald-400 -rotate-12"></span>
-                                <span class="absolute bottom-0 right-0 hidden w-10 h-20 transition-all duration-100 ease-out transform translate-x-10 translate-y-8 bg-emerald-400 -rotate-12"></span>
-                                <span class="relative ">About Us</span>
+                            <button className='btn p-0 m-0 my-[6px] mt-6 md:w-[20%] btn-ghost border border-white text-[16px] rounded-none text-white hover:bg-[#d91f53] hover:text-white  max-sm:font-light max-sm:p-4 '>View Our Tour</button>
 
-                            </a>
                         </div>
 
                     </div>
@@ -83,21 +72,14 @@ const Slider = () => {
                     className='bg-no-repeat bg-cover bg-center' style={{ backgroundImage: 'url(https://i.ibb.co/rbTX9sF/sean-oulashin-KMn4-VEe-EPR8-unsplash.jpg)' }}>
                     <div className='flex justify-center items-center h-[650px] text-red-50 bg-black bg-opacity-50 pt-20'>
                         <div className=' text-center'>
-                            <h1 className='font-medium text-[18px] mb-2'>WELCOME TO MEDTRAIL CAMP</h1>
-                            <h1 className='text-5xl px-5 font-semibold text-emerald-500'> YOUR HEALTH, OUR PRIORITY</h1>
-                            <p className='w-[70%] mx-auto mt-4 mb-7'>Providing expert care and medical services to ensure a healthier community.
-                                Join us in our mission to make healthcare accessible for everyone.</p>
+                            <h1 className='font-light font-Caveat text-[#a3d8f1]
+ text-[30px]  mb-2 '>Exciting Schemes Just a Click Away</h1>
+                            <h1 className='md:text-5xl text-3xl px-5 font-Caveat font-semibold text-[#dbd9d9]'> AMAZING SENTORINI 7 DAYS TOUR</h1>
 
 
-                            <a href='/aboutUs' class="relative px-5 py-2 font-medium text-white group ">
 
-                                <span class="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform translate-x-0 -skew-x-12 bg-emerald-500 group-hover:bg-emerald-700 group-hover:skew-x-12"></span>
-                                <span class="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform skew-x-12 bg-emerald-500 group-hover:bg-emerald-700 group-hover:-skew-x-12"></span>
-                                <span class="absolute bottom-0 left-0 hidden w-10 h-20 transition-all duration-100 ease-out transform -translate-x-8 translate-y-10 bg-emerald-400 -rotate-12"></span>
-                                <span class="absolute bottom-0 right-0 hidden w-10 h-20 transition-all duration-100 ease-out transform translate-x-10 translate-y-8 bg-emerald-400 -rotate-12"></span>
-                                <span class="relative ">About Us</span>
+                            <button className='btn p-0 m-0 my-[6px] mt-6 md:w-[20%] btn-ghost border border-white text-[16px] rounded-none text-white hover:bg-[#d91f53] hover:text-white  max-sm:font-light max-sm:p-4 '>View Our Tour</button>
 
-                            </a>
                         </div>
                     </div>
                 </SwiperSlide>
@@ -120,38 +102,42 @@ const Slider = () => {
                     <div className='py-5 space-y-2'>
                         <div className='relative'>
 
-                            <select className="select select-bordered rounded-none  max-sm:w-full w-[250px] 
+                            <select className="select select-bordered rounded-none  pl-8 max-sm:w-full w-[250px] 
 ">
-                                <option disabled selected> Destination</option>
+                                <option disabled selected > Destination</option>
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>
                                 <option>4</option>
                                 <option>5</option>
                             </select>
+                            <h1 className='absolute top-3 left-2'><SlLocationPin className='text-xl' /> </h1>
                         </div>
-                        <div>
-                            <select className="select select-bordered rounded-none max-sm:w-full  w-[250px]  ">
-                                <option disabled selected>Type</option>
+                        <div className='relative'>
+                            <select className="select select-bordered rounded-none max-sm:w-full  pl-8  w-[250px]  ">
+
+                                <option disabled selected >Type</option>
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>
                                 <option>4</option>
                                 <option>5</option>
                             </select>
-
+                            <h1 className='absolute top-3 left-2'><LuFileType className='text-xl' /></h1>
 
                         </div>
 
                     </div>
                     <div className='space-y-2 m-0'>
-                        <div className="">
-                            {/* <label htmlFor="date" className="block text-sm font-medium text-gray-700">Select Date</label> */}
-                            <input type="date" id="date" className=" block  rounded-none max-sm:w-full w-[250px] p-[12px] border border-gray-300  shadow-sm focus:ring-emerald-500 focus:border-emerald-500 sm:text-sm" />
+                        <div className="relative">
+
+                            <input type="date" id="date" className=" block  rounded-none max-sm:w-full w-[250px] pl-10 p-[12px] border border-gray-300  shadow-sm focus:ring-emerald-500 focus:border-emerald-500 sm:text-sm" />
+                            <h1 className='absolute top-3 left-2'><BsCalendar2Date className="text-[18px]" /></h1>
                         </div>
-                        <div className="">
-                            {/* <label htmlFor="date" className="block text-sm font-medium text-gray-700">Select Date</label> */}
-                            <input type="date" id="date" className=" block  max-sm:w-full w-[250px] p-[12px] border border-gray-300 rounded-none shadow-sm focus:ring-emerald-500 focus:border-emerald-500 sm:text-sm" />
+                        <div className="relative">
+
+                            <input type="date" id="date" className=" block  max-sm:w-full w-[250px] p-[12px] pl-10 border border-gray-300 rounded-none shadow-sm focus:ring-emerald-500 focus:border-emerald-500 sm:text-sm" />
+                            <h1 className='absolute top-3 left-2'><BsCalendar2Date className="text-[18px]" /></h1>
                         </div>
                     </div>
                     <div className='lg:w-full lg:py-12 my-5'>
@@ -168,7 +154,9 @@ const Slider = () => {
                             <p> ${price}</p>
                             <p>$200</p>
                         </div>
-                        <button className='btn p-0 m-0 my-[6px] w-full bg-[#d91f53] text-[16px] rounded-none text-white hover:bg-white hover:text-[#d91f53]'>SEARCH</button>
+
+                        <button className='btn p-0 m-0 my-[8px] w-full bg-[#d91f53] text-[16px] rounded-none text-white hover:bg-white hover:text-[#d91f53]'>SEARCH</button>
+
                     </div>
                 </div>
 

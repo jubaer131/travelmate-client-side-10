@@ -7,12 +7,12 @@ import { SlDiamond } from 'react-icons/sl';
 const BucketList = () => {
     return (
 
-        <div className='container mx-auto lg:h-80 mb-20 p-10'>
+        <div className='container mx-auto lg:h-80 mb-20 pt-5'>
 
             <div className='text-center space-y-8 pt-8'>
                 <h1 className='text-4xl font-bold'>Top up your Bucket List</h1>
                 <div className="divider divider-neutral w-[40%] border-white mx-auto"><SlDiamond className="text-6xl  " /></div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br /> sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Duis aute irure dolor in reprehenderit..</p>
+                <p>Expand your bucket list with unforgettable adventures: see the Northern Lights in Norway, explore Machu Picchu in Peru, <br /> skydive over Dubai, dive in the Great Barrier Reef, or take a hot air balloon ride in Turkey.</p>
             </div>
             <div className='lg:flex justify-center items-center gap-5 mt-8 mb-6 max-sm:flex-1'>
                 <div className=''>
