@@ -15,16 +15,30 @@ const Mylist = () => {
             .then(data => {
                 setitems(data)
             });
-    }, [user])
+    }, [user, setitems])
     console.log(items)
 
 
     return (
-        <section className="p-6 dark:bg-gray-100 dark:text-gray-800">
+        <section className="p-6 dark:bg-gray-100 dark:text-gray-800 container mx-auto">
             <Helmet><title>My list</title></Helmet>
-            {
-                items?.map(item => <MylistCard item={item} items={items} setitems={setitems}></MylistCard>)
-            }
+
+            <table className="table">
+                {/* head */}
+                <thead>
+                    <tr>
+                        <th>Sport Name</th>
+                        <th>User Name</th>
+                        <th>Delete</th>
+                        <th>Update</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                {
+                    items?.map(item => <MylistCard item={item} items={items} setitems={setitems}></MylistCard>)
+                }
+            </table>
+
         </section>
     );
 };
