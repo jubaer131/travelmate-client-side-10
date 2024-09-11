@@ -70,11 +70,11 @@ const MylistCard = ({ item, items, setitems }) => {
                     </td>
 
                     <th>
-                        <button onClick={() => handleDelete(_id)} className="btn bg-violet-500 text-white">Delete</button>
+                        <button onClick={() => handleDelete(_id)} className="btn bg-[#005294] text-white">Delete</button>
                     </th>
                     <th>
                         <Link to={`/updatetour/${_id}`}>
-                            <button className="btn bg-teal-500 text-white">Update</button>
+                            <button className="btn bg-[#005294] text-white">Update</button>
                         </Link>
                     </th>
                 </tr>

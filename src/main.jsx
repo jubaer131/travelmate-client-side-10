@@ -27,6 +27,7 @@ import Card3 from './assets/pages/Card3.jsx'
 import Card4 from './assets/pages/Card4.jsx'
 import Card5 from "./assets/pages/Card5.jsx"
 import Card6 from './assets/pages/Card6.jsx'
+import Countries from './assets/pages/Countries.jsx'
 
 const router = createBrowserRouter([
   {
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
         element: <AllTouristSport></AllTouristSport>,
         loader: () => fetch('https://travel-mate-server-kappa.vercel.app/tour')
       },
+      // {
+      //   path: "/popularCountry",
+      //   element:
+      // },
       {
         path: "/details/:id",
         element: <PrivateRout3> <AlltouristsportDetails></AlltouristsportDetails></PrivateRout3>,
