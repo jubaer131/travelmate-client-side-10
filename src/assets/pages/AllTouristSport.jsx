@@ -16,15 +16,15 @@ const AllTouristSport = () => {
                 <title>Popular tourist sport</title>
             </Helmet>
 
-            <div className="relative p-6 py- h-48 dark:bg-violet-600 dark:text-gray-50 bg-cover bg-no-repeat bg-[url('https://i.ibb.co.com/f0sgsW8/Blue-Orange-Aesthetic-Typography-Piano-Covers-Mix-Playlist-Music-Thumbnail-1.png')] ">
+            <div className="relative p-6 py- md:h-48 dark:bg-violet-600 dark:text-gray-50 bg-cover bg-no-repeat bg-[url('https://i.ibb.co.com/f0sgsW8/Blue-Orange-Aesthetic-Typography-Piano-Covers-Mix-Playlist-Music-Thumbnail-1.png')] ">
 
 
-                <div className="w-[450px] mx-auto py-2 lg:py-0">
+                <div className="md:w-[450px] mx-auto py-2 lg:py-0">
                     <div className="divider divider-warning  w-20 mx-auto text-white"></div>
                     <p className="text-center text-3xl text-white font-Caveat">POPULAR TOURIST SPORT</p>
 
                 </div>
-                <div className="absolute top-[165px] left-[680px] flex justify-center items-center gap-3 w-[550px] h-14 bg-white shadow-xl">
+                <div className="absolute md:top-[165px] md:left-[680px] flex justify-center items-center gap-3 md:w-[550px] md:h-14 bg-white shadow-xl">
                     <Link>Home <span className="mx-2 font-semibold">/</span></Link>
                     <Link>Popular Tourist Sport <span className="mx-2 font-bold">/</span></Link>
                     <Link>My List</Link>
@@ -32,7 +32,7 @@ const AllTouristSport = () => {
             </div>
 
 
-            <div className="flex justify-center gap-5   max-w-7xl mx-auto mt-12 ">
+            <div className="md:flex justify-center gap-5   max-w-7xl mx-auto mt-12 ">
 
 
                 <div className="grid justify-center grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-2 ">

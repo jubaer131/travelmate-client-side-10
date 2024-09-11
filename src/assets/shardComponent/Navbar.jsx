@@ -48,6 +48,10 @@ const Navbar = () => {
             to="/alltouristsport" className={({ isActive }) => isActive ? 'text-[16px] text-[#005294] font-medium   border-green-500 mr-6 ' : 'text-[16px] font-medium  border-green-400 mr-6 '} >
             All Tourist Sport
         </NavLink>
+        <NavLink
+            to="/popularCountry" className={({ isActive }) => isActive ? 'text-[16px] text-[#005294] font-medium   border-green-500 mr-6 ' : 'text-[16px] font-medium  border-green-400 mr-6 '} >
+            Popular Country
+        </NavLink>
 
 
         <NavLink

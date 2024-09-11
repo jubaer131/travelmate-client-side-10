@@ -4,16 +4,18 @@ import { Link } from "react-router-dom";
 
 const Countries = () => {
     return (
+        <>
+            <div className="max-w-7xl mx-auto mt-40">
+                <h1 className='text-4xl font-bold text-center'>Top Destinations</h1>
+                <div className="divider divider-neutral w-[40%] border-white mx-auto"><SlDiamond className="text-6xl  " /></div>
+                <p className="text-center mb-20">Explore some of the world's top destinations that offer unique experiences and unforgettable memories. Start with Paris,<br /> France, where the iconic Eiffel Tower, charming streets, and world-class art museums await</p>
 
-        <div className="max-w-7xl mx-auto mt-40">
-            <h1 className='text-4xl font-bold text-center'>Top Destinations</h1>
-            <div className="divider divider-neutral w-[40%] border-white mx-auto"><SlDiamond className="text-6xl  " /></div>
-            <p className="text-center mb-20">Explore some of the world's top destinations that offer unique experiences and unforgettable memories. Start with Paris,<br /> France, where the iconic Eiffel Tower, charming streets, and world-class art museums await</p>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-2">
+            </div>
+            <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-2">
                 <Link to="/card1">
 
-                    <div className="hero  shadow-2xl" style={{ backgroundImage: 'url(https://i.ibb.co/QrjvjQC/manzur-alam-jxz7-Fe1btc-unsplash.jpg)' }} >
+                    <div className="hero  shadow-2xl" style={{ backgroundImage: 'url(https://i.ibb.co.com/SRmCb6k/beautiful-strawberry-garden-sunrise-doi-ang-khang-chiang-mai-thailand-335224-761.jpg)' }} >
                         <div className=""></div>
                         <div className="hero-content text-center text-neutral-content">
                             <div className="max-w-md h-72">
@@ -69,10 +71,8 @@ const Countries = () => {
                         </div>
                     </div>
                 </Link>
-            </div>
-
-        </div >
-
+            </div >
+        </>
     );
 };
 
