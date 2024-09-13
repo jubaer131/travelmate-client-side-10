@@ -38,7 +38,7 @@
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/AbuRaihan32/Lagoon-client-side.git
+   https://github.com/jubaer131/travelmate-client-side-10
     ```
 2. Navigate to the project directory:
     ```sh
