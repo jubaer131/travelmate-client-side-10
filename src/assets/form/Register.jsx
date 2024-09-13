@@ -90,69 +90,72 @@ const Register = () => {
     }
 
     return (
-        <div className=" mx-auto bg-[url('https://i.ibb.co/KVqpHXK/sean-oulashin-KMn4-VEe-EPR8-unsplash.jpg')] bg-cover min-h-screen">
+        <div className="max-w-6xl mx-auto md:flex items-center  lg:my-32 my-5">
             <Helmet><title>Register</title></Helmet>
 
-            <div className="hero  ">
-                <div className="hero-content flex-col ">
-                    <div className="text-center lg:text-left">
-                        <h1 className="text-5xl font-bold">Register now!</h1>
+            <div className="w-1/2 border-4 border-base-200 max-sm:hidden">
+                <img src="https://i.ibb.co.com/4W7BhtN/two-factor-authentication-concept-illustration-114360-5598.jpg" alt="" className="bg-cover bg-center w-full h-full " />
+            </div>
+            <div className="lg:flex-col lg:w-1/2 bg-base-200  px-4 py-8">
+                <div className=" shrink-0 ">
+                    <div className="text-center ">
+                        <h1 className="text-3xl font-bold ">Register now</h1>
+                        <p className="text-[16px] font-normal">Inter your information for registation</p>
                     </div>
-                    <div className="card shrink-0 w-full max-w-4xl shadow-2xl bg-base-100">
-                        <form onSubmit={handleregistation} className="card-body lg:w-[600px] ">
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Name</span>
-                                </label>
-                                <input type="text" name="name" placeholder="name" className="input input-bordered" required />
-                            </div>
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Photo</span>
-                                </label>
-                                <input type="url" name="photo" placeholder="photo" className="input input-bordered" required />
-                            </div>
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Email</span>
-                                </label>
-                                <input type="email" name="email" placeholder="email" className="input input-bordered" required />
-                            </div>
+                    <form onSubmit={handleregistation} className="px-8 w-full  py-[14px]">
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Name</span>
+                            </label>
+                            <input type="text" name="name" placeholder="name" className="input input-bordered rounded-none" required />
+                        </div>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Photo</span>
+                            </label>
+                            <input type="url" name="photo" placeholder="photo" className="input input-bordered rounded-none" required />
+                        </div>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Email</span>
+                            </label>
+                            <input type="email" name="email" placeholder="email" className="input input-bordered rounded-none" required />
+                        </div>
 
 
 
-                            <div className="form-control relative">
-                                <label className="label">
-                                    <span className="label-text">Password</span>
-                                </label>
+                        <div className="form-control relative">
+                            <label className="label">
+                                <span className="label-text">Password</span>
+                            </label>
 
-                                <input
-                                    type={showPassword ? 'text' : 'password'}
-                                    name="password"
-                                    placeholder="password"
-                                    className="input input-bordered "
-                                    required
+                            <input
+                                type={showPassword ? 'text' : 'password'}
+                                name="password"
+                                placeholder="password"
+                                className="input input-bordered rounded-none "
+                                required
 
-                                />
-                                <span className="absolute right-5 bottom-5" onClick={() => setShowPassword(!showPassword)}>
-                                    {/* You can use eye icons here to toggle password visibility */}
-                                    {showPassword ? <FaEyeSlash /> : <FaEye />}
-                                </span>
+                            />
+                            <span className="absolute right-5 bottom-5" onClick={() => setShowPassword(!showPassword)}>
 
-                            </div>
+                                {showPassword ? <FaEyeSlash /> : <FaEye />}
+                            </span>
+
+                        </div>
 
 
 
-                            <div className="form-control mt-6">
-                                <button className="btn bg-violet-600 text-white">Register</button>
-                            </div>
-                            <ToastContainer />
-                        </form>
+                        <div className="form-control  w-[80%] mx-auto mt-5">
+                            <button className="btn  bg-[#d91f53] text-white hover:bg-white hover:text-[#d91f53] text-xl rounded-none ">Register</button>
+                        </div>
+                        <ToastContainer />
+                    </form>
 
-                        <p className='text-center pb-4'>You have an account please  <Link className='text-green-500' to="/login"> Login</Link></p>
-                    </div>
+                    <p className='text-center mt-5'>You have an account please  <Link className='text-[#dd6199]' to="/login"> Login</Link></p>
                 </div>
             </div>
+
         </div>
     );
 };

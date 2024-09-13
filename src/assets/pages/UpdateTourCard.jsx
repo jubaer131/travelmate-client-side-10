@@ -53,116 +53,125 @@ const UpdateTourCard = () => {
     }
     return (
         <div>
-            <Helmet><title>Update tour card</title></Helmet>
-            <h1 className="text-green-500 text-3xl text-center">Update the Card</h1>
+            <div>
+                <Helmet>
+                    <title>Update tour card</title>
+                </Helmet>
 
-            <section className="p-10 dark:bg-gray-100 dark:text-gray-900 shadow-xl">
-                <form onSubmit={handleaddsport} className="container flex flex-col mx-auto space-y-12">
-                    <fieldset className="grid grid-cols-3 gap-6 p-6 rounded-md shadow-sm dark:bg-gray-50">
+                <div className="space-y-3 md:w-full mx-auto text-center max-sm:p-5  md:my-8">
+                    <h1 className=" md:text-3xl font-semibold text-center text-black  font-Caveat">Update tour card</h1>
+                    <p className="md:text-xl text-black max-sm:p-4">This feature allows you to update tour card Which you have added before</p>
+                </div>
+                <section className="shadow-xl md:max-w-5xl px-4 mx-auto pt-5 md:mt-5 md:mb-10 max-sm:mx-5  bg-gray-100  ">
 
-                        <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3">
-                            <div className="col-span-full sm:col-span-3">
-                                <label className=" w-full">
-                                    <div className="label">
-                                        <span className="label-text"> Tourist sport Name</span>
+                    <form onSubmit={handleaddsport} className=" flex flex-col space-y-12">
+                        <fieldset className="grid grid-cols-3 gap-6 p-6 rounded-md shadow-sm dark:bg-gray-50">
 
-                                    </div>
-                                    <input type="text" name="name" placeholder="Tourist sport Name" defaultValue={name} className="input input-bordered w-full " />
+                            <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3">
+                                <div className="col-span-full sm:col-span-3">
+                                    <label className=" w-full">
+                                        <div className="label">
+                                            <span className="label-text"> Tourist sport Name</span>
 
-                                </label>
+                                        </div>
+                                        <input type="text" name="name" defaultValue={name} placeholder="Tourist sport Name" className="border-b-2 border-b-[#c6144a] input input-bordered w-full rounded-lg" />
+
+                                    </label>
+                                </div>
+                                <div className="col-span-full sm:col-span-3">
+                                    <label className="form-control w-full ">
+                                        <div className="label">
+                                            <span className="label-text"> Country </span>
+
+                                        </div>
+                                        <input type="text" name="country" defaultValue={country} placeholder=" Country Name  " className="border-b-2 rounded-lg border-b-[#c6144a] input input-bordered w-full " />
+
+                                    </label>
+                                </div>
+                                <div className="col-span-full sm:col-span-3">
+                                    <label className="form-control w-full">
+                                        <div className="label">
+                                            <span className="label-text">Location </span>
+
+                                        </div>
+                                        <input type="text" name="location" defaultValue={location} placeholder=" Location" className="border-b-2 border-b-[#c6144a] input input-bordered w-full rounded-lg" />
+
+                                    </label>
+                                </div>
+                                <div className="col-span-full sm:col-span-3">
+                                    <label className="form-control w-full ">
+                                        <div className="label">
+                                            <span className="label-text">Short description </span>
+
+                                        </div>
+                                        <input type="text" name="description" defaultValue={description} placeholder="Short description" className="border-b-2 border-b-[#c6144a] input input-bordered w-full rounded-lg" />
+
+                                    </label>
+                                </div>
+                                <div className="col-span-full sm:col-span-3">
+                                    <label className="form-control w-full ">
+                                        <div className="label">
+                                            <span className="label-text">Average Cost </span>
+
+                                        </div>
+                                        <input type="text" name="cost" defaultValue={cost} placeholder=" Average cost" className="border-b-2 border-b-[#c6144a] input input-bordered w-full rounded-lg" />
+
+                                    </label>
+                                </div>
+                                <div className="col-span-full sm:col-span-3">
+                                    <label className="form-control w-full ">
+                                        <div className="label">
+                                            <span className="label-text"> Seasonality </span>
+
+                                        </div>
+                                        <input type="text" name="seasonality" defaultValue={seasonality} placeholder=" Seasonality" className="border-b-2 border-b-[#c6144a] input input-bordered w-full rounded-lg" />
+
+                                    </label>
+                                </div>
+                                <div className="col-span-full sm:col-span-3">
+                                    <label className="form-control w-full ">
+                                        <div className="label">
+                                            <span className="label-text"> Travel Time </span>
+
+                                        </div>
+                                        <input type="text" name="traveltime" defaultValue={traveltime} placeholder="  Travel time " className="border-b-2 border-b-[#c6144a] input input-bordered w-full rounded-lg " />
+
+                                    </label>
+                                </div>
+                                <div className="col-span-full sm:col-span-3">
+                                    <label className="form-control w-full ">
+                                        <div className="label">
+                                            <span className="label-text">Total visitor par yer </span>
+
+                                        </div>
+                                        <input type="text" name="visitor" defaultValue={visitor} placeholder="Total visitor paryer" className="border-b-2 border-b-[#c6144a] input input-bordered w-full rounded-lg" />
+
+                                    </label>
+                                </div>
+
+                                <div className="col-span-full">
+                                    <label className="form-control w-full ">
+                                        <div className="label">
+                                            <span className="label-text"> Photo Url </span>
+
+                                        </div>
+                                        <input type="url" name="Photo" defaultValue={Photo} placeholder="  Photo url" className="border-b-2 border-b-[#c6144a] input input-bordered w-full rounded-lg" />
+
+                                    </label>
+                                </div>
+                                <div className="col-span-full">
+                                    <input type="submit" value="send" className="btn border-b-2 border-b-[#c6144a] btn-block bg-[#c6144a]  text-white rounded-lg hover:bg-white hover:text-[#c6144a] border-0" />
+                                </div>
+
+
+
                             </div>
-                            <div className="col-span-full sm:col-span-3">
-                                <label className="form-control w-full ">
-                                    <div className="label">
-                                        <span className="label-text">  Country Name</span>
+                        </fieldset>
 
-                                    </div>
-                                    <input type="text" name="country" placeholder=" Country Name" defaultValue={country} className="input input-bordered w-full " />
+                    </form>
+                </section>
 
-                                </label>
-                            </div>
-                            <div className="col-span-full sm:col-span-3">
-                                <label className="form-control w-full">
-                                    <div className="label">
-                                        <span className="label-text"> Location</span>
-
-                                    </div>
-                                    <input type="text" name="location" placeholder=" Location" defaultValue={location} className="input input-bordered w-full " />
-
-                                </label>
-                            </div>
-                            <div className="col-span-full sm:col-span-3">
-                                <label className="form-control w-full ">
-                                    <div className="label">
-                                        <span className="label-text">Short description </span>
-
-                                    </div>
-                                    <input type="text" name="description" placeholder="Short description" defaultValue={description} className="input input-bordered w-full " />
-
-                                </label>
-                            </div>
-                            <div className="col-span-full sm:col-span-3">
-                                <label className="form-control w-full ">
-                                    <div className="label">
-                                        <span className="label-text">Average cost </span>
-
-                                    </div>
-                                    <input type="text" name="cost" placeholder=" Average cost" defaultValue={cost} className="input input-bordered w-full " />
-
-                                </label>
-                            </div>
-                            <div className="col-span-full sm:col-span-3">
-                                <label className="form-control w-full ">
-                                    <div className="label">
-                                        <span className="label-text"> Seasonality </span>
-
-                                    </div>
-                                    <input type="text" name="seasonality" placeholder=" Seasonality" defaultValue={seasonality} className="input input-bordered w-full " />
-
-                                </label>
-                            </div>
-                            <div className="col-span-full sm:col-span-3">
-                                <label className="form-control w-full ">
-                                    <div className="label">
-                                        <span className="label-text"> Travel time </span>
-
-                                    </div>
-                                    <input type="text" name="traveltime" placeholder="  Travel time" defaultValue={traveltime} className="input input-bordered w-full " />
-
-                                </label>
-                            </div>
-                            <div className="col-span-full sm:col-span-3">
-                                <label className="form-control w-full ">
-                                    <div className="label">
-                                        <span className="label-text">Total visitor paryer </span>
-
-                                    </div>
-                                    <input type="text" name="visitor" placeholder="Total visitor paryer" defaultValue={visitor} className="input input-bordered w-full " />
-
-                                </label>
-                            </div>
-
-                            <div className="col-span-full">
-                                <label className="form-control w-full ">
-                                    <div className="label">
-                                        <span className="label-text"> Photo url </span>
-
-                                    </div>
-                                    <input type="url" name="Photo" placeholder="  Photo url" defaultValue={Photo} className="input input-bordered w-full " />
-
-                                </label>
-                            </div>
-                            <div className="col-span-full">
-                                <input type="submit" value="add coffee" className="btn btn-block bg-green-500" />
-                            </div>
-
-
-
-                        </div>
-                    </fieldset>
-
-                </form>
-            </section>
+            </div>
 
         </div>
     );

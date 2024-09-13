@@ -15,7 +15,7 @@ const Card11 = ({ data }) => {
                 <div className="md:hero-content   lg:flex-row items-start justify-start p-6 ">
                     <img
                         src={Photo}
-                        className="shadow-2xl md:h-52 bg-cover bg-no-repeat md:w-[25%]" />
+                        className="shadow-2xl md:h-52 bg-cover bg-no-repeat md:w-[20%]" />
                     <div className='md:p-3 max-sm:mt-4 md:w-3/4 '>
                         <div>
                             <div className='flex justify-start gap-3 mb-3'>

@@ -1,5 +1,7 @@
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
+import { RiDeleteBin6Line } from "react-icons/ri";
+import { GrUpdate } from "react-icons/gr";
 
 const MylistCard = ({ item, items, setitems }) => {
 
@@ -8,7 +10,7 @@ const MylistCard = ({ item, items, setitems }) => {
 
     const handleDelete = (_id) => {
 
-        console.log(_id)
+
         Swal.fire({
             title: 'Are you sure?',
             text: "You won't be able to revert this!",
@@ -21,7 +23,7 @@ const MylistCard = ({ item, items, setitems }) => {
             if (result.isConfirmed) {
 
 
-                fetch(`http://localhost:5000/tour/${_id}`, {
+                fetch(`https://travel-mate-server-kappa.vercel.app/tour/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
@@ -70,11 +72,11 @@ const MylistCard = ({ item, items, setitems }) => {
                     </td>
 
                     <th>
-                        <button onClick={() => handleDelete(_id)} className="btn bg-[#005294] text-white">Delete</button>
+                        <button onClick={() => handleDelete(_id)} className="btn bg-[#d91f53] mask mask-circle text-white"><RiDeleteBin6Line /></button>
                     </th>
                     <th>
                         <Link to={`/updatetour/${_id}`}>
-                            <button className="btn bg-[#005294] text-white">Update</button>
+                            <button className="btn bg-[#005294] text-white mask mask-circle"><GrUpdate /></button>
                         </Link>
                     </th>
                 </tr>

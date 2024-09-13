@@ -1,10 +1,19 @@
 
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Card33 from "../pages/Card11";
+import { authContest } from "../firebase/AutherProvider";
+import { PuffLoader } from "react-spinners";
 
 const Card3 = () => {
 
     const [ban, setban] = useState([])
+
+
+    const { loading } = useContext(authContest)
+
+    if (loading) {
+        return <div className="w-full h-[660px] flex items-center justify-center"> <PuffLoader color="orange" size={70}></PuffLoader></div>
+    }
 
     useEffect(() => {
 
@@ -32,15 +41,15 @@ const Card3 = () => {
                     <p className="text-center md:text-3xl text-white font-Caveat">POPULAR TOURIST SPORT</p>
 
                 </div>
-                <div className="absolute md:top-[165px] md:left-[680px] flex justify-center items-center gap-3 md:w-[550px] md:h-14 bg-white shadow-xl">
-                    <Link>Home <span className="mx-2 font-semibold">/</span></Link>
-                    <Link>Popular Country <span className="mx-2 font-bold"></span></Link>
+                <div className="absolute md:top-[165px] md:left-[680px] left-24 top-44 max-sm:p-2 flex justify-center items-center gap-3 md:w-[550px] md:h-14 bg-white shadow-xl">
+                    <Link to="/">Home <span className="mx-2 font-semibold">/</span></Link>
+                    <Link to="popularCountry">Popular Country <span className="mx-2 font-bold"></span></Link>
 
                 </div>
             </div>
             <div className="max-w-7xl mx-auto md:mt-20 mt-12 max-sm:p-5">
                 <h1 className="text-3xl font-semibold"><span className="text-4xl font-extrabold text-[#1690c0]">|</span > Popular <span className="text-3xl font-semibold text-[#1690c0]">Country</span> </h1>
-                <p className="text-[18px] mt-3 mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt .</p>
+                <p className="text-[18px] mt-3 mb-8">Here are some popular tourist country you can visit there for more Adventure.</p>
             </div>
             <div className="max-w-7xl mx-auto grid grid-cols-1  gap-7">
                 {
@@ -48,9 +57,7 @@ const Card3 = () => {
                 }
             </div>
 
-            {/* {
-                ban.map(data => <Card33 data={data}></Card33>)
-            } */}
+
         </>
     );
 };

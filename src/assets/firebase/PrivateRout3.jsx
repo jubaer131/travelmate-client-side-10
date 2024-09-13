@@ -1,12 +1,13 @@
 import { useContext } from "react";
 import { authContest } from "./AutherProvider";
 import { Navigate } from "react-router-dom";
+import { PuffLoader } from 'react-spinners';
 
 const PrivateRout3 = ({ children }) => {
     const { user, loading } = useContext(authContest)
 
     if (loading) {
-        return <div className="w-20 h-20 border-4 border-dashed rounded-full animate-spin dark:border-violet-600 ml-48">loading</div>
+        return <div className="w-full h-[660px] flex items-center justify-center"> <PuffLoader color="orange" size={70}></PuffLoader></div>
     }
 
     if (user) {

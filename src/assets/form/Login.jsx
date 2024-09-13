@@ -8,6 +8,8 @@ import { FaGoogle } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import { authContest } from "../firebase/AutherProvider";
 import { Helmet } from "react-helmet";
+import { BiLogInCircle } from "react-icons/bi";
+import { RiEyeCloseFill } from "react-icons/ri";
 
 
 const Login = () => {
@@ -62,63 +64,70 @@ const Login = () => {
     }
 
     return (
-        <div>
+        <div className="max-w-5xl mx-auto  ">
             <Helmet><title>Login </title></Helmet>
 
-            <div className="hero min-h-screen bg-base-200 bg-[url('https://i.ibb.co/2vSwSXJ/aaron-burden-b9dr-VB7x-IOI-unsplash.jpg')] bg-cover">
 
-                <div className="hero-content flex-col lg:w-[800px]">
-                    <div className="text-center lg:text-left">
-                        <h1 className="text-5xl text-white font-bold">Login now!</h1>
-                    </div>
-                    <div className="card shrink-0  lg:w-[600px] shadow-2xl bg-base-100 md:px-20 ">
-                        <form onSubmit={handlelogin} className="card-body  ">
+            <div className="lg:flex items-center lg:my-32 my-5">
+                <div className="w-1/2 border-4 border-base-200 max-sm:hidden">
+                    <img src="https://i.ibb.co.com/8xXKSnk/mobile-login-concept-illustration-114360-83.jpg" alt="" className="bg-cover bg-center w-full h-full" />
+                </div>
+                <div className=" flex-col lg:w-1/2 bg-base-200  px-8 py-4">
+
+                    <div className=" shrink-0      ">
+                        <div className="space-y-2 text-center mb-3">
+                            <h1 className="text-3xl font-bold">Login </h1>
+                            <p className="text-[16px] font-normal">Inter your information to login</p>
+                        </div>
+                        <form onSubmit={handlelogin} className="">
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Email</span>
                                 </label>
-                                <input type="email" name="email" placeholder="email" className="input input-bordered" required />
+                                <input type="email" name="email" placeholder="jubayerahmad131@gmail.com" className="input input-bordered rounded-none " required />
                             </div>
 
-                            <div className="form-control relative">
+                            <div className="form-control relative pt-4">
                                 <label className="label">
-                                    <span className="label-text">Password</span>
+                                    <span className="label-text"> Password</span>
                                 </label>
 
                                 <input
                                     type={showPassword ? 'text' : 'password'}
                                     name="password"
-                                    placeholder="password"
-                                    className="input input-bordered "
+                                    placeholder="Inter your password"
+                                    className="input input-bordered  rounded-none "
                                     required
 
                                 />
                                 <span className="absolute right-5 bottom-5" onClick={() => setShowPassword(!showPassword)}>
-                                    {/* You can use eye icons here to toggle password visibility */}
+
                                     {showPassword ? <FaEyeSlash /> : <FaEye />}
                                 </span>
 
                             </div>
 
 
-                            <div className="form-control mt-6">
-                                <button className="btn bg-violet-500 text-white">Login</button>
+                            <div className="form-control w-[80%] mx-auto my-6">
+                                <button className="btn bg-[#d91f53] text-white hover:bg-white hover:text-[#d91f53] text-xl  rounded-none">Login</button>
                             </div>
                             <ToastContainer />
                         </form>
 
 
-                        <p className="px-3 text-[16px] text-center dark:text-gray-600">Login with social accounts</p>
-                        <div className="flex justify-between my-5 px-8">
-                            <button onClick={handlegoogle} className="btn bg-violet-500 text-white"><FaGoogle></FaGoogle> Google  </button>
-                            <button onClick={handlegithub} className="btn bg-violet-500 text-white"><FaGithub></FaGithub> github  </button>
+                        <div className="divider ">Login with social accounts</div>
+                        <div className="flex justify-center  gap-5 px-8">
+                            <button onClick={handlegoogle} className=" text-black  mask mask-circle "><FaGoogle></FaGoogle>  </button>
+                            <button onClick={handlegithub} className=" text-black "><FaGithub></FaGithub>   </button>
                         </div>
-                        <p className='text-center pb-4 mb-6 px-5'>Don't have an account please  <Link className='text-green-500' to="/register">Register now</Link></p>
+                        <p className='text-center  my-6 px-5'>Don't have an account please  <Link className='text-[#dd6199]' to="/register">Register now</Link></p>
                     </div>
 
                 </div>
 
             </div>
+
+
         </div>
 
     );

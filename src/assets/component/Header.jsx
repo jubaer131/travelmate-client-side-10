@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 const Header = () => {
     return (
 
-        <div className='max-sm:hidden flex  items-center w-[82%] mx-auto p-2 '>
+        <div className='max-sm:hidden flex   items-center w-[82%] mx-auto p-2 '>
 
             <div className='flex items-center gap-8 w-[45%]'>
                 <h1 className='text-white'> Phone: (012)-345-6789</h1>

@@ -1,3 +1,4 @@
+import { SlLocationPin } from "react-icons/sl";
 import { useLoaderData } from "react-router-dom";
 
 
@@ -9,41 +10,49 @@ const Card11Details = () => {
 
     return (
         <div>
-            <div className=" p-4 shadow-md dark:bg-gray-50 dark:text-gray-800 ">
-                <div className="flex justify-between pb-4 border-bottom">
-                    <div className="flex items-center">
-                        <a rel="noopener noreferrer" href="#" className="mb-0 capitalize dark:text-gray-800"></a>
-                    </div>
-                    <a rel="noopener noreferrer" href="#"></a>
+            <div className="card lg:card-side bg-base-100  gap-6 px-8 mt-10 container mx-auto my-8 shadow-2xl shadow-[#005294]">
+                <div className="lg:w-6/12 ">
+                    <figure><img className="w-full lg:h-[650px] bg-cover py-8 mask mask-squircle bg-no-repeat " src={Photo} alt="Album" /></figure>
                 </div>
-                <div className="space-y-4">
-                    <div className="space-y-2">
-                        <img src={Photo} alt="" className="block object-cover object-center w-full rounded-md md:h-[500px] dark:bg-gray-500" />
-                        <div className="flex items-center text-xs">
-                            <span>{country}</span>
-                        </div>
-                    </div>
-                    <div className="space-y-2">
-                        <a rel="noopener noreferrer" href="#" className="block">
-                            <h3 className="text-xl font-semibold dark:text-violet-600">{name}</h3>
-                        </a>
-                        <p className="leading-snug dark:text-gray-600"> {description}</p>
-                        <div className="grid grid-cols-1 md:grid-cols-2 pt-5">
-                            <div>
-                                <p>Location :{location}</p>
-                                <p>Traveltime : {traveltime}</p>
-                                <p>seasonality : {seasonality}</p>
+
+                <div className=" lg:w-6/12 p-6">
+                    <div className="  mx-auto lg:space-y-16 ">
+                        <article className="space-y-4  ">
+                            <div className="space-y-6">
+                                <h1 className="text-3xl font-semibold md:tracking-tight md:text-4xl">{name}</h1>
+                                <h2 className="text-[20px] font-medium flex items-center gap-4"><SlLocationPin className="text-[#005294]" />  {location}</h2>
                             </div>
-                            <div>
-                                <p> Cost :{cost}</p>
-                                <p> Visitors :{visitor}</p>
+
+                            <hr className=" border-t border-dashed border-[#005294] " />
+                            <p className="text-[20px] font-medium flex items-center gap-4 ">Travel Time :  {traveltime} </p>
+
+                            <p >  <span className="text-[20px] font-medium">  </span></p>
+
+                        </article>
+                        <div>
+                            <div className="flex flex-wrap items-center justify-start md:gap-10 mb-5">
+                                <h2 className="flex items-center gap-4"> <span className="text-[20px] font-medium">  Cost :{cost} </span>  </h2>
+                                <h2 className="flex items-center gap-4 text-[20px] font-medium">Seasonality :  {seasonality}</h2>
 
                             </div>
+                            <div className="space-y-5">
+                                <hr className=" border-t border-dashed border-[#005294]" />
+
+                                <p className="flex items-center gap-4">  Description : {description.slice(0, 350)}   </p>
+
+                            </div>
+
+
+                            <div className="mt-6">
+                                <h2 className="text-[20px] font-medium flex justify-start items-center gap-4">   Visitor : <div className="badge badge-lg text-[#005294]">{visitor}</div>  </h2>
+
+                            </div>
+
+
                         </div>
-
                     </div>
-
                 </div>
+
             </div>
         </div>
     );

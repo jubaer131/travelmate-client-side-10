@@ -2,7 +2,7 @@
 import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { authContest } from "../firebase/AutherProvider";
-import { BiLogOutCircle } from "react-icons/bi";
+import { BiLogInCircle, BiLogOutCircle } from "react-icons/bi";
 
 
 const Navbar = () => {
@@ -114,19 +114,21 @@ const Navbar = () => {
                         </div>
 
                         {/* <button onClick={handlelogout} className="btn  bg-violet-600 text-white text-[15px]">Logout </button> */}
-                        <button onClick={handlelogout} className="relative px-5 py-2 font-medium  group  md:inline mb-2">
-                            <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform translate-x-0 -skew-x-[18deg] border border-[#005294] group-hover:border-[#005294] group-hover:skew-x-[18deg]"></span>
-                            <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform skew-x-[18deg] border border-[#005294] group-hover:border-[#005294] group-hover:-skew-x-[18deg]"></span>
-
-                            <span className="flex items-center justify-center gap-2 relative  "><BiLogOutCircle
-                                className="text-xl"></BiLogOutCircle> Logout</span>
+                        <button onClick={handlelogout} className="relative border border-[#005294] inline-flex items-center justify-start px-7 py-2 overflow-hidden font-medium transition-all rounded-full hover:bg-white group mr-2">
+                            <span className="h-48 w-full rounded rotate-[-40deg] bg-[#005294] absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
+                            <span className="flex items-center justify-center gap-2 relative text-center w-full text-[#005294] transition-colors duration-300 ease-in-out group-hover:text-white">
+                                {" "}
+                                <BiLogInCircle className="text-xl"></BiLogInCircle>{" "}
+                                <span className="hidden md:inline">Logout</span>
+                            </span>
                         </button>
-                    </> : <Link to="/login">  <button onClick={handlelogout} className="relative px-5 py-2 font-medium  group  md:inline mb-2">
-                        <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform translate-x-0 -skew-x-[18deg] border border-[#005294] group-hover:border-[#005294] group-hover:skew-x-[18deg]"></span>
-                        <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform skew-x-[18deg] border border-[#005294] group-hover:border-[#005294] group-hover:-skew-x-[18deg]"></span>
-
-                        <span className="flex items-center justify-center gap-2 relative  "><BiLogOutCircle
-                            className="text-xl"></BiLogOutCircle>Signin</span>
+                    </> : <Link to="/login">  <button onClick={handlelogout} className="relative border border-[#005294] inline-flex items-center justify-start px-7 py-2 overflow-hidden font-medium transition-all rounded-full hover:bg-white group mr-2">
+                        <span className="h-48 w-full rounded rotate-[-40deg] bg-[#005294] absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
+                        <span className="flex items-center justify-center gap-2 relative text-center w-full text-[#005294] transition-colors duration-300 ease-in-out group-hover:text-white">
+                            {" "}
+                            <BiLogInCircle className="text-xl"></BiLogInCircle>{" "}
+                            <span className="hidden md:inline">Sign In</span>
+                        </span>
                     </button> </Link>
                 }
 
