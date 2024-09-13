@@ -7,7 +7,7 @@
 * Primary Goal: Facilitate travel planning and booking for customers.
 * Secondary Goals: Promote travel destinations, provide travel tips, and offer customer support.
 
-[Live link](http://www.yourprojectdemo.com)
+[Live link](https://travelmatetravelagency131.netlify.app/register)
 
 [Client repository](https://github.com/jubaer131/travelmate-client-side-10.git)
 
@@ -34,13 +34,27 @@
 * Backend: Node.js, Express.js (or similar).
 * Frontend: HTML5, CSS3, JavaScript.
 * Database: MongoDB for storing travel data and customer info.
+## Installation Steps
 
-# Steps to Clone:
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/AbuRaihan32/Lagoon-client-side.git
+    ```
+2. Navigate to the project directory:
+    ```sh
+    cd folder-name
+    ```
+3. Install dependencies:
+    ```sh
+    npm install
+    ```
 
-* Navigate to Cloned Directory: Use terminal cd command.
-* Install Dependencies: Run npm install.
-* Setup Environment Variables: Create .env file if needed.
-* Run the Project: Follow README instructions, npm start.
+    
+## used npm packages:
+
+1. - [@Swiper-slider](https://swiperjs.com/)
+2. - [@React-spiner](https://www.davidhu.io/react-spinners)
+3. - [@Tailwindcss-buttons](https://devdojo.com/tailwindcss/buttons)
 
 
 
