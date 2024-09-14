@@ -7,7 +7,7 @@
 * Primary Goal: Facilitate travel planning and booking for customers.
 * Secondary Goals: Promote travel destinations, provide travel tips, and offer customer support.
 
-[Live link](https://travelmatetravelagency131.netlify.app/register)
+[Live link](https://travel-mate-131.netlify.app)
 
 [Client repository](https://github.com/jubaer131/travelmate-client-side-10.git)
 
