@@ -90,13 +90,13 @@ const Register = () => {
     }
 
     return (
-        <div className="max-w-6xl mx-auto md:flex items-center  lg:my-32 my-5">
+        <div className="max-w-6xl mx-auto md:flex items-center  lg:my-32 my-5 ">
             <Helmet><title>Register</title></Helmet>
 
             <div className="w-1/2 border-4 border-base-200 max-sm:hidden">
                 <img src="https://i.ibb.co.com/4W7BhtN/two-factor-authentication-concept-illustration-114360-5598.jpg" alt="" className="bg-cover bg-center w-full h-full " />
             </div>
-            <div className="lg:flex-col lg:w-1/2 bg-base-200  px-4 py-8">
+            <div className="lg:flex-col lg:w-1/2 bg-base-200  px-4 py-5">
                 <div className=" shrink-0 ">
                     <div className="text-center ">
                         <h1 className="text-3xl font-bold ">Register now</h1>
